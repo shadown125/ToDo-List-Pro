@@ -40,6 +40,27 @@
         margin-top: .5rem;
         margin-right: .7rem;
     }
+
+    &__svg-circle {
+        position: relative;
+        margin-right: 3rem;
+        margin-top: -.3rem;
+        @include svg-circle-main;
+
+        @include button-animated-svg {
+            background-color: $color-check-2;
+        };
+    }
+
+    &__svg-add-circle {
+        margin-top: -.3rem;
+        margin-left: -.3rem;
+        @include svg {
+            fill: $color-check-2;
+        };
+
+        
+    }
 }
 
 .main-content {
