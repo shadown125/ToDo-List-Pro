@@ -1,0 +1,282 @@
+.int-container {
+    height: 100%;
+    width: 100%;    
+    background-color: $color-primary-3;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+////////////////////////////////////////////////////
+// INTERFACE HEADER
+
+.inbox-container {
+    display: flex;
+    background-color: #F3917B;
+    height: 7rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 2rem;
+    align-items: center;
+
+    &__title {
+
+    }
+
+    &__circle {
+        @include svg-circle-interface;
+        background-color: grey;
+        padding: .5rem;
+    }
+
+    &__svg-mail {
+        fill: $color-grey-light-2;
+        height: 2.3rem;
+        width: 2.3rem;
+    }
+}
+
+////////////////////////////////////////////////////
+// MAIN CONTENT
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 2px $color-grey-dark-3;
+    align-self: flex-start;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//Profile left
+    &__profile-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: .5rem;
+    }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//CHECKBOXES
+
+    &__checkbox-container {
+       display: block;
+       position: relative;
+       cursor: pointer;
+       font-size: 1.5rem;
+       margin-left: 2.5rem;
+       user-select: none;
+       
+    }
+
+    &__custom-checkbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.7rem;
+        width: 1.7rem;
+        background-color: $linear-gradient-bgc-2;
+        transform: translate(-50%, -50%);
+        box-shadow: 1rem 2rem 6rem rgba(0,0,0,.7);
+        transition: all .2s linear;
+
+        // &:checked {
+        //     background-color: blue;
+        // }
+
+        &:hover {
+            background-color: grey;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked ~ &__checkbox-container &__custom-checkbox::after {
+        display: block;
+    }
+
+    &__name {
+        margin-left: 1.7rem;
+    }
+
+    &__text {
+        margin-right: -1.5rem;
+    }
+
+    &__svg-circle {
+        @include svg-circle-nav;
+        background-color: $color-labels-1;
+        padding: .2rem;
+        fill: $color-grey-light-2;
+        position: relative;
+
+        @include button-animated-svg {
+            background-color: $color-labels-1;
+        };
+    }
+
+    &__svg-arrow {
+        @include svg-interface;
+
+    }
+
+    &__svg-link {
+        @include svg-interface;
+        margin-left: -3rem;
+        fill: $linear-gradient-header-1;
+
+        @include respond(tab-land-big) {
+            margin-left: -1rem;
+        }
+    }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//Message rigth side
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        padding: 0 1rem;
+    }
+
+    &__wrapper-message {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+        color: $color-grey-light-2;
+        font-size: 1.1rem;
+    }
+
+    &__wrapper-img {
+        width: 30%;
+
+    }
+
+    &__main-message {
+    }
+
+    &__profile {
+        
+    }
+
+   
+}
+
+.message-container {
+    
+    width: 100%;
+    padding: 1.5rem 2rem;
+
+    &__textarea-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.2rem;
+    }
+
+    &__textarea {
+        width: 90%;
+        font-size: 1.5rem;
+        font-family: inherit;
+        font-weight: inherit;
+        border-radius: 15px;
+        background-color: $color-grey-dark-2;
+        color: $color-grey-light-2;
+        border: none;
+        resize: none;
+        outline: none;
+        padding: 1rem 5rem;
+        margin-left: -1rem;
+        z-index: 1;
+    }
+
+
+
+    &__wrapper-interface {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////
+// SVG
+
+    &__textarea-svg {
+        margin-top: -13rem;
+        z-index: 2;
+    }
+
+    &__wrapper-svg {
+        display: flex;
+    }
+
+    &__circle-delete{
+        @include svg-circle-main;
+        margin-left: 1rem;
+        background-color: grey;
+        padding: .56rem;
+        padding-left: .6rem;
+        position: relative;
+        transition: background-color .2s linear;
+
+        &:hover {
+            background-color: red;
+        }
+
+        @include button-animated-svg {
+            background-color: red;
+        };
+
+    }
+
+    &__svg-delete {
+        width: 1.7rem;
+        height: 1.7rem;
+        fill: $color-grey-light-2;
+    }
+
+    &__svg-circle-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $color-labels-1;
+        border-radius: 50%;
+        padding: .5rem;
+        fill: $color-grey-light-2;
+        z-index: 2;
+        position: relative;
+        box-shadow: 0 .5rem 1rem rgba(black, .15);
+
+        @include button-animated-svg {
+            background-color: $color-labels-1;
+        };
+    }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//BUTTON
+
+    &__send-button {
+
+        background-color: $color-labels-1;
+        color: $color-grey-light-2;
+        position: relative;
+        
+        @include button-animated;
+    }
+}

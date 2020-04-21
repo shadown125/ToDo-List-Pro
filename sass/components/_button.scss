@@ -1,0 +1,17 @@
+.btn-svg {
+    border: none;
+    background-color: transparent;
+    
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover,
+    &:hover ~ .icons-box {
+        cursor: pointer;
+        display: block;
+    }
+
+
+}

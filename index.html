@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" /> <!--Author "Larissa"-->
+    <link rel="stylesheet" href="css/main.css">
+    <title>ToDo App</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__title">
+                <svg class="svg header__svg-logo u-margin-left-medium">
+                    <use xlink:href="img/sprite.svg#icon-qq"></use>
+                </svg>
+                <h1 class="heading-primary u-margin-left-medium">Todo List</h1> 
+            </div>
+
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search for task">
+                <button class="btn-svg search__button">
+                    <svg class="search__svg-glas">
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="icons">
+                <ul class="icons__list">
+                    <li class="icons__single-item">
+                         <button class="btn-svg">
+                             <svg class="svg icons__svg-circle">
+                                  <use xlink:href="img/sprite.svg#icon-circle-with-plus"></use>
+                              </svg>
+                         </button>
+                     </li>
+                     <li class="icons__single-item">
+                         <button class="btn-svg">
+                             <svg class="svg icons__svg-globe">
+                                 <use xlink:href="img/sprite.svg#icon-globe"></use>
+                             </svg>
+                        </button>
+                     </li>
+                    <li class="icons__single-item">
+                      <button class="btn-svg">
+                         <svg class="svg icons__svg-config">
+                             <use xlink:href="img/sprite.svg#icon-cog"></use>
+                        </svg>
+                     </button>
+                     <div class="icons-box">
+                        <ul class="icons-box__settings">
+                            <li class="icons-box__settings-item" data-item="Settings" role="menuitem">
+                                <a href="#" class="icons-box__settings-item-link">Change Color</a>
+                            </li>
+                            <li class="icons-box__settings-item" data-item="Settings" role="menuitem">
+                                <a href="#" class="icons-box__settings-item-link">Change Color</a>
+                            </li>
+                            <li class="icons-box__settings-item" data-item="Settings" role="menuitem">
+                                <a href="#" class="icons-box__settings-item-link">Change Color</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <nav class="sidebar">
+                <div class="sidebar__wrapper">
+                    <div class="profile-box">
+                        <img src="img/img-1.jpg" alt="User photo" class="profile-box__profile">
+                        <div class="profile-box__text">
+                            <span class="profile-box__user-name">Wukong</span>
+                            <span class="profile-box__user-experience">lorem ipsum</span>
+                        </div>
+                    </div>
+                    <div class="profile-menu">
+
+                        <div class="profile-menu__wrapper">
+                            <div class="profile-menu__inbox">
+                                    <svg class="profile-menu__svg-mail">
+                                        <use xlink:href="img/sprite.svg#icon-mail"></use>
+                                    </svg>
+                            </div>
+
+                            <div class="profile-menu__today">
+                                    <svg class="profile-menu__svg-clipboard">
+                                        <use xlink:href="img/sprite.svg#icon-sticky-note"></use>
+                                    </svg>
+                            </div>
+
+                            <div class="profile-menu__next-days">
+                                    <svg class="profile-menu__svg-clipboard">
+                                        <use xlink:href="img/sprite.svg#icon-sticky-note"></use>
+                                    </svg>
+                            </div>
+                        </div>
+
+                        <div class="profile-menu__text">
+                            <a href="#" class="profile-menu__text-inbox">Inbox</a>
+                            <a href="#" class="profile-menu__text-today">Today</a>
+                            <a href="#" class="profile-menu__text-next">Next 7 days</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-functions">
+                        <div class="nav-functions__project-wrapper">
+                            <div class="project-container">
+                                <div class="project-container__circle-project"></div>
+                                <h3 class="heading-tertiary u-margin-right-big u-margin-left-small">PROJECTS</h3>
+                                <button class="btn-svg">
+                                    <svg class="project-container__svg-plus">
+                                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="project-container__option-list">
+                                <ul class="project-container__item-list">
+                                    
+                                    <li class="project-container__items"><a href="#" class="project-container__items-name">XMind</a></li>
+                                    <li class="project-container__items"><a href="#" class="project-container__items-name">G2A Shop</a></li>
+                                    <li class="project-container__items"><a href="#" class="project-container__items-name">Blog about League of Legends</a></li>
+                                    <li class="project-container__items"><a href="#" class="project-container__items-name">G2A Shop</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="labels-container">
+                            <div class="labels-container__circle-labels"></div>
+                            <h3 class="heading-tertiary u-margin-right-big u-margin-left-small">LABELS</h3>
+                            <button class="btn-svg">
+                                <svg class="labels-container__svg-plus">
+                                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="filtres-container">
+                            <div class="filtres-container__circle-filtres"></div>
+                            <h3 class="heading-tertiary u-margin-right-big u-margin-left-small">FILTRES</h3>
+                            <button class="btn-svg">
+                                <svg class="filtres-container__svg-plus">
+                                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="sidebar__copyright-wrapper">
+                    <p class="sidebar__copyright">&copy; Copyright 2020 by Dawid Oleksiuk. All rights reserved.</p>
+                </div>
+            </nav>
+
+            <section class="content">
+
+                <div class="progression">
+                    <div class="progression__date-wrapper">
+                        <p class="progression__day">17</p>
+                        <p class="progression__month">APR</p>
+                    </div>
+
+                    <div class="progression__progression-content">
+                        <p class="progression__title">Today's Tasks</p>
+                        <div class="progression__bar-container">
+                            <div class="progression__bar"></div>
+                        </div>
+                        <div class="progression__task-wrapper">
+                            <span class="progression__done-tasks task-progression">Done Todo:
+                                <span class="progression__done-counter task-progression">2<span></span>
+                            <span class="progression__must-do-task task-progression">Must Do: 
+                                <span class="progression__must-do-task-counter task-progression">5</span></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="todos">
+
+                    <div class="todos__title-wrapper">
+                        <p class="todos__title">IN PROGRESS</p>
+                        <div class="todos__today-wrapper">
+                            <svg class="todos__svg-clipboard">
+                                <use xlink:href="img/sprite.svg#icon-sticky-note"></use>
+                            </svg>
+                            <p class="todos__description">Today</p>
+                        </div>
+                    </div>
+                    
+
+                    <div class="main-content">
+
+                        <div class="main-content__header">
+                            <div class="main-content__circle"></div>
+                            <p class="main-content__title">Wsdaf ds afl;sdajfk  jal;sfdlkfd;saf sdf</p>
+                            <div class="main-content__svg-wrapper">
+
+                                <div class="main-content__svg-circle-check">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-check">
+                                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="main-content__svg-circle-message">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-message">
+                                            <use xlink:href="img/sprite.svg#icon-bubble"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="main-content__svg-circle-attachment">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-attachment">
+                                            <use xlink:href="img/sprite.svg#icon-link"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-content__text-container">
+                            <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptas, sequi odit voluptatum quae, magni commodi nihil ratione labore illum assumenda. Dolorum laudantium dolor enim mollitia aliquid eaque, numquam accusamus.</p>
+                        </div>
+                    </div>
+
+                    <div class="main-content">
+
+                        <div class="main-content__header">
+                            <div class="main-content__circle"></div>
+                            <p class="main-content__title">Wsdaf ds afl;sdajfk  jal;sfdlkfd;saf sdf</p>
+                            <div class="main-content__svg-wrapper">
+
+                                <div class="main-content__svg-circle-check">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-check">
+                                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="main-content__svg-circle-message">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-message">
+                                            <use xlink:href="img/sprite.svg#icon-bubble"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="main-content__svg-circle-attachment">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-attachment">
+                                            <use xlink:href="img/sprite.svg#icon-link"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-content__text-container">
+                            <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptas, sequi odit voluptatum quae, magni commodi nihil ratione labore illum assumenda. Dolorum laudantium dolor enim mollitia aliquid eaque, numquam accusamus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi recusandae natus aliquam maiores minima cupiditate tempora nobis voluptas fugit, culpa rerum dolor exercitationem facere atque animi officia et a repellendus?</p>
+                        </div>
+                    </div>
+
+                    <div class="main-content">
+
+                        <div class="main-content__header">
+                            <div class="main-content__circle"></div>
+                            <p class="main-content__title">Wsdaf ds afl;sdajfk  jal;sfdlkfd;saf sdf</p>
+                            <div class="main-content__svg-wrapper">
+
+                                <div class="main-content__svg-circle-check">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-check">
+                                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="main-content__svg-circle-message">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-message">
+                                            <use xlink:href="img/sprite.svg#icon-bubble"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="main-content__svg-circle-attachment">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-attachment">
+                                            <use xlink:href="img/sprite.svg#icon-link"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-content__text-container">
+                            <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptas, sequi odit voluptatum quae, magni commodi nihil ratione labore illum assumenda. Dolorum laudantium dolor enim mollitia aliquid eaque, numquam accusamus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi recusandae natus aliquam maiores minima cupiditate tempora nobis voluptas fugit, culpa rerum dolor exercitationem facere atque animi officia et a repellendus?</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="interface">
+                <div class="int-container">
+                    <div class="interface__main-wrapper">
+                    <div class="inbox-container">
+                        <h2 class="inbox-container__title heading-secondary u-margin-left-small">INBOX</h2>
+                        <div class="inbox-container__circle">
+                            <svg class="inbox-container__svg-mail">
+                                <use xlink:href="img/sprite.svg#icon-mail"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+                <div class="middle-content-wrapper">
+                    <div class="chat-container">
+
+                        <div class="chat-container__profile-wrapper">
+                            <label for="" class="chat-container__checkbox-container">
+                                <input type="checkbox" class="chat-container__checkbox" name="delete" value="chat">
+                                <span class="chat-container__custom-checkbox"></span>
+                            </label>
+                                <h3 class="heading-tertiary chat-container__name">Chuck Norris</h3>
+                                <button class="btn-svg">
+                                    <svg class="chat-container__svg-link">
+                                        <use xlink:href="img/sprite.svg#icon-link"></use>
+                                    </svg>
+                                </button>
+                                <p class="chat-container__text">30 minutes ago</p>
+                                <div class="chat-container__svg-circle">
+                                    <button class="btn-svg">
+                                        <svg class="chat-container__svg-arrow">
+                                            <use xlink:href="img/sprite.svg#icon-undo2"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            
+                            
+                        </div>
+
+                        <div class="chat-container__wrapper">
+                            <div class="chat-container__wrapper-img">
+                                <img src="img/img-2.jpg" alt="User photo" class="profile-box__profile chat-container__profile">
+                            </div>
+                            <div class="chat-container__wrapper-message">
+                                
+                                <h4 class="heading-fourthly">Can we make so activity</h4>
+                                <p class="chat-container__main-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eos temporibus sapiente  iure delectus tempore sequi maiores tempora quasi, non autem.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-container">
+
+                        <div class="chat-container__profile-wrapper">
+                            <label for="" class="chat-container__checkbox-container">
+                                <input type="checkbox" class="chat-container__checkbox" name="delete" value="chat">
+                                <span class="chat-container__custom-checkbox"></span>
+                            </label>
+                                <h3 class="heading-tertiary chat-container__name">Chuck Norris</h3>
+                                <button class="btn-svg">
+                                    <svg class="chat-container__svg-link">
+                                        <use xlink:href="img/sprite.svg#icon-link"></use>
+                                    </svg>
+                                </button>
+                                <p class="chat-container__text">30 minutes ago</p>
+                                <div class="chat-container__svg-circle">
+                                    <button class="btn-svg">
+                                        <svg class="chat-container__svg-arrow">
+                                            <use xlink:href="img/sprite.svg#icon-undo2"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            
+                            
+                        </div>
+
+                        <div class="chat-container__wrapper">
+                            <div class="chat-container__wrapper-img">
+                                <img src="img/img-2.jpg" alt="User photo" class="profile-box__profile chat-container__profile">
+                            </div>
+                            <div class="chat-container__wrapper-message">
+                                
+                                <h4 class="heading-fourthly">Can we make so activity</h4>
+                                <p class="chat-container__main-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eos temporibus sapiente  iure delectus tempore sequi maiores tempora quasi, non autem.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-container">
+
+                        <div class="chat-container__profile-wrapper">
+                            <label for="" class="chat-container__checkbox-container">
+                                <input type="checkbox" class="chat-container__checkbox" name="delete" value="chat">
+                                <span class="chat-container__custom-checkbox"></span>
+                            </label>
+                                <h3 class="heading-tertiary chat-container__name">Chuck Norris</h3>
+                                <button class="btn-svg">
+                                    <svg class="chat-container__svg-link">
+                                        <use xlink:href="img/sprite.svg#icon-link"></use>
+                                    </svg>
+                                </button>
+                                <p class="chat-container__text">30 minutes ago</p>
+                                <div class="chat-container__svg-circle">
+                                    <button class="btn-svg">
+                                        <svg class="chat-container__svg-arrow">
+                                            <use xlink:href="img/sprite.svg#icon-undo2"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            
+                            
+                        </div>
+
+                        <div class="chat-container__wrapper">
+                            <div class="chat-container__wrapper-img">
+                                <img src="img/img-2.jpg" alt="User photo" class="profile-box__profile chat-container__profile">
+                            </div>
+                            <div class="chat-container__wrapper-message">
+                                
+                                <h4 class="heading-fourthly">Can we make so activity</h4>
+                                <p class="chat-container__main-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eos temporibus sapiente  iure delectus tempore sequi maiores tempora quasi, non autem.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-container">
+
+                        <div class="chat-container__profile-wrapper">
+                            <label for="" class="chat-container__checkbox-container">
+                                <input type="checkbox" class="chat-container__checkbox" name="delete" value="chat">
+                                <span class="chat-container__custom-checkbox"></span>
+                            </label>
+                                <h3 class="heading-tertiary chat-container__name">Chuck Norris</h3>
+                                <button class="btn-svg">
+                                    <svg class="chat-container__svg-link">
+                                        <use xlink:href="img/sprite.svg#icon-link"></use>
+                                    </svg>
+                                </button>
+                                <p class="chat-container__text">30 minutes ago</p>
+                                <div class="chat-container__svg-circle">
+                                    <button class="btn-svg">
+                                        <svg class="chat-container__svg-arrow">
+                                            <use xlink:href="img/sprite.svg#icon-undo2"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            
+                            
+                        </div>
+
+                        <div class="chat-container__wrapper">
+                            <div class="chat-container__wrapper-img">
+                                <img src="img/img-2.jpg" alt="User photo" class="profile-box__profile chat-container__profile">
+                            </div>
+                            <div class="chat-container__wrapper-message">
+                                
+                                <h4 class="heading-fourthly">Can we make so activity</h4>
+                                <p class="chat-container__main-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eos temporibus sapiente  iure delectus tempore sequi maiores tempora quasi, non autem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="message-container">
+                    <form action="#" class="message-container__form">
+                        <div class="message-container__textarea-wrapper">
+                            <div class="message-container__textarea-svg">
+                                <div class="message-container__svg-circle-arrow">
+                                        <button class="btn-svg">
+                                            <svg class="chat-container__svg-arrow">
+                                                <use xlink:href="img/sprite.svg#icon-undo2"></use>
+                                            </svg>
+                                        </button>
+                                </div>
+                            </div>
+                            <textarea name="message" class="message-container__textarea" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="message-container__wrapper-interface">
+
+                            <div class="message-container__wrapper-svg">
+                                <div class="main-content__svg-circle-attachment">
+                                    <button class="btn-svg">
+                                        <svg class="main-content__svg-attachment">
+                                            <use xlink:href="img/sprite.svg#icon-link"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="message-container__circle-delete">
+                                    <button class="btn-svg">
+                                        <svg class="message-container__svg-delete">
+                                            <use xlink:href="img/sprite.svg#icon-bin"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="message-container__button">
+                                <button class="message-container__send-button">send</button>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="library/jquery-3.5.0.min.js"></script>
+    <script src="JavaScript/main.js"></script>
+</body>
+</html>

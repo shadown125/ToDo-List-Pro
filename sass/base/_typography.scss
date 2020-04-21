@@ -1,0 +1,41 @@
+.heading-primary {
+
+}
+
+.heading-secondary {
+    font-size: 2rem;
+    color: $color-grey-light-2;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.heading-tertiary {
+    font-size: 1.7rem;
+    color: $color-grey-light-2;
+    font-family: inherit;
+    font-weight: 400;
+}
+
+.heading-fourthly {
+    font-size: 1.4rem;
+    color: $color-grey-light-2;
+    font-family: inherit;
+    font-weight: 400;
+}
+
+.svg {
+    @include svg;
+    transition: all .2s linear;
+    
+    
+    &:hover {
+        @include svg {
+            transform: scale(0.85);
+        }
+    }
+}
+
+.task-progression {
+    font-size: 1.5rem;
+    color: $color-grey-light-2;
+}

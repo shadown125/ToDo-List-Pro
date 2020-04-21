@@ -1,0 +1,139 @@
+.header {
+    
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: space-between;
+    align-items: center;
+   // background-image: linear-gradient(to left bottom , $linear-gradient-header-1,$linear-gradient-header-2);
+    background-color: $linear-gradient-header-1;
+    height: 10vh;
+    padding: 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    &__title {
+        display: flex;
+        font-size: 1.7rem;
+        color: white;
+    }
+
+    &__svg-logo {
+        fill: $color-title;
+        margin-top: 0.8rem;
+    }
+ 
+}
+
+.search {
+        display: flex;
+        flex: 0 0 40%;
+        align-items: center;
+        justify-content: center;
+
+    &__input {
+        font-family: inherit;
+        font-size: 1.6rem;
+        color: inherit;
+        background-color: $color-grey-light-2;
+        border:none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        margin-right: -3.25rem;
+        transition: width .1s linear;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: $color-grey-light-3;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+
+    }
+
+    &__button {
+        border:none;
+        background-color: $color-grey-light-2;
+    }
+
+    &__svg-glas {
+        height: 2.3rem;
+        width: 2.3rem;
+        fill: $color-grey-dark-2;
+    }
+}
+
+.icons {
+    display: flex;
+    flex-basis: 20%;
+    padding-right: 2rem;
+
+    &__list {
+        list-style-type: none; 
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+     }
+ 
+     &__single-item {
+        
+     }
+
+    &__svg-circle {
+        fill: $color-title;
+    }
+
+    &__svg-globe {
+        fill: $color-title;
+    }
+
+    &__svg-config {
+        fill: $color-title;
+
+    }
+
+   
+}
+
+.icons-box {
+    display:none;
+    position: absolute;
+    background-color: $linear-gradient-header-1;
+    border-radius: 15px; 
+
+    // UL
+    &__settings {
+        list-style-type: none;
+        
+    }
+
+    //LI
+    &__settings-item {
+        
+        font-size: 1.5rem;
+        
+        width: 100%;
+        
+
+        :hover {
+            background-color: $color-grey-light-4;
+            display: block;
+            // opacity: .4;
+        }
+    }
+
+    &__settings-item-link {
+        display: block;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        color: white;
+        border-radius: 15px;
+    }
+}

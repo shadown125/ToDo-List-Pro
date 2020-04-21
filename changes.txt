@@ -1,0 +1,10 @@
+Adding:
+bgc gradient,
+respons for big and smaller desktop,
+Improved layout grid,
+delete button in inteface section,
+changing svg colors,
+adding new options to nav,
+added copyrights,
+changing text colors,
+created new checkbox

@@ -1,0 +1,156 @@
+.todos {
+    height: 80%;
+    width: 100%;
+    background-color: $color-primary-3;
+    border-radius: 15px;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.4rem;
+
+    &__title-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+        border-bottom: 2px solid $color-grey-dark-3;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-grey-light-2;
+    }
+
+    &__today-wrapper {
+        display: flex;
+        padding: .5rem;
+    }
+
+    &__description {
+        font-size: 1.7rem;
+        color: $color-grey-light-2;
+    }
+
+    //SVG
+
+    &__svg-clipboard {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: violet;
+        margin-top: .5rem;
+        margin-right: .7rem;
+    }
+}
+
+.main-content {
+    width: 100%;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: .1rem;
+        width: 100%;
+    }
+
+    &__circle {
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: $color-today-2;
+        border-radius: 50%;
+
+    }
+
+    &__title {
+        display: block;
+        margin-right: 28rem;
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: $color-grey-light-2;
+        // width: 30%;
+        margin-left: 3rem;
+    }
+
+    // WRAPPING SVG
+
+    &__svg-wrapper {
+        display: flex;
+        width: 18%;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(tab-land) {
+            width: 15%;
+        }
+    }
+
+    &__svg-circle-check {
+        @include svg-circle-main;
+        background-color: $color-check-1;
+        padding: .3rem;
+        position: relative;
+
+        @include button-animated-svg {
+            background-color: $color-check-1;
+        };
+    }
+
+    &__svg-check {
+        width: 2.1rem;
+        height: 2.1rem;
+        fill: $color-check-2;
+    }
+
+    &__svg-circle-message {
+        @include svg-circle-main;
+        background-color: $color-labels-1;
+        padding: .5rem;
+
+        position: relative;
+
+        @include button-animated-svg {
+            background-color: $color-labels-1;
+        };
+    }
+
+    &__svg-message {
+        width: 1.7rem;
+        height: 1.7rem;
+        fill: $color-grey-light-2;
+    }
+
+    &__svg-circle-attachment {
+        @include svg-circle-main;
+        background-color: $color-title-main-2;
+        padding: .4rem;
+        position: relative;
+
+        @include button-animated-svg {
+            background-color: $color-title-main-2;
+        };
+    }
+
+    &__svg-attachment {
+        width: 2.1rem;
+        height: 2.1rem;
+        fill: $color-grey-light-2;
+    }
+
+    //MAIN TEXT CONTENT
+
+    &__text-container {
+        padding: 1rem 1.8rem;
+        border-left: 2px solid $color-grey-dark-3;
+        width: 75%;
+        margin-left: .6rem;
+        margin-top: -0.3rem;
+
+        @include respond(tab-land) {
+            width: 87%;
+        }
+    }
+
+    &__text {
+        color: $color-grey-light-2;
+    }
+}

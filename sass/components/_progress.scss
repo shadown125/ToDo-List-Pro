@@ -1,0 +1,81 @@
+.progression {
+    background-color: $color-primary-3;
+    width: 100%;
+    height: 20%;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    display: flex;
+
+    &__date-wrapper {
+        width: 15%;
+        height: 100%;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__day {
+        font-size: 5rem;
+        color: $color-grey-light-2;
+    }
+
+    &__month {
+        font-size: 2rem;
+        margin-top: -2rem;
+        color: $color-grey-light-2;
+    }
+
+    //PROGRESSION BAR MAIN
+
+    &__progression-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    &__title {
+        font-size: 2.3rem;
+        color:$color-grey-light-2;
+        font-weight: 700;
+        margin-top: 3rem;
+    }
+
+    //WRAPPER TASK
+
+    &__task-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: .3rem;
+        margin-bottom: 1rem;
+    }
+
+    &__done-counter {
+        margin-left: .3rem;
+    }
+
+
+    &__must-do-task-counter {
+        margin-right: 4rem;
+    }
+
+    //PROGRESSION BAR
+
+    &__bar-container {
+        width: 93%;
+        height: .3rem;
+        background-color: $color-cont-bar;
+        border-radius: 15px;
+        margin-left: .3rem;
+    }
+
+    &__bar {
+        width: 33%;
+        height: .3rem;
+        background-color: $color-ins-bar;
+        border-radius: 15px;
+    }
+}

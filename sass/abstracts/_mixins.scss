@@ -1,0 +1,184 @@
+@mixin svg {
+    height: 3.5rem;
+    width: 3.5rem;
+    @content;
+}
+
+
+@mixin svg-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $color-grey-light-2;
+}
+
+@mixin svg-interface {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@mixin svg-position {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 1rem;
+    padding: .5rem .6rem;
+        @content;
+}
+
+@mixin svg-circle-nav {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1.5rem;
+}
+
+@mixin svg-circle-interface {
+    border-radius: 50%;
+    width: 3.3rem;
+    height: 3.3rem;
+    margin-left: 1.5rem;
+}
+
+@mixin svg-circle-main {
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+   
+}
+
+@mixin nav-bottom-center {
+    display: flex;
+    padding: .5rem;
+    align-items: center;
+}
+
+@mixin button-animated {
+        &,
+        &:link,
+        &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 10rem;
+        padding: 1rem 3rem;
+        transition: all .2s;
+        font-size: 1.5rem;
+        border: none;
+        cursor: pointer;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba(black,.2);
+    
+            &::after {
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+        }
+
+        &:active,
+        &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(black,.2);
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .4s;
+            background-color: $color-labels-1;
+        }
+
+        @content;
+}
+
+@mixin button-animated-svg {
+    &,
+    &:link,
+    &:visited {
+    border-radius: 50%;
+    transition: all .2s;
+
+    border: none;
+    cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 1rem 2rem rgba(black,.2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.4);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(black,.2);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+        @content;
+    }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37em) { @content };  //600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };   //900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };  //1200px
+    }
+
+    @if $breakpoint == tab-land-big {
+        @media only screen and (max-width: 87.5em) { @content };  //1200px
+    }
+
+    @if $breakpoint == 2k-desktop {
+        @media only screen and (min-width: 132.5em) { @content };   // +1800px
+    }
+}

@@ -1,0 +1,231 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &__copyright-wrapper {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    &__copyright {
+        font-size: 1.5rem;
+    }
+}
+
+///////////////////////////////////////////////////////////////////
+// PROFILE IMG
+
+.profile-box {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    
+
+    &__profile {
+        height: 7.75rem;
+        border-radius: 50%;
+    }
+
+    &__user-name {
+        display: block;
+        margin-left: 3rem;
+        margin-top: -.8rem;
+        font-size: 1.7rem;
+        color: $color-grey-light-2;
+    }
+
+    &__user-experience {
+        display: block;
+        font-size: 1.3rem;
+        margin-left: 3rem;
+        margin-top: .7rem;
+        color: $color-grey-light-2;
+    }
+
+    &__text {
+        height: 100%;
+    }
+}
+
+///////////////////////////////////////////////////////////////////
+// SECOND PART OF NAV
+
+.profile-menu {
+    width: 100%;
+    height: 15rem;
+    // background: #000;
+    padding: 1rem;
+    display: flex;
+
+    &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    }
+
+    //SVG BACKGROUND
+    &__inbox {
+        @include svg-position {
+            background-image: linear-gradient(to right bottom, $color-mail-1, $color-mail-2);
+        }
+       
+    }
+
+    &__today {
+       @include svg-position {
+        background-image: linear-gradient(to right bottom, $color-today-1, $color-today-2);
+        padding: .9rem;
+       }
+  
+
+    }
+
+    &__next-days {
+        @include svg-position {
+            background-image: linear-gradient(to right bottom, $color-last-1, $color-last-2);
+            padding: .9rem;
+        }
+     
+    }
+
+    //SVG
+
+    &__svg-mail {
+        fill: $color-grey-light-2;
+        height: 2.3rem;
+        width: 2.3rem;
+    }
+
+    &__svg-clipboard {
+        fill: $color-grey-light-2;
+        height: 2rem;
+        width: 2rem;
+    }
+
+///////////////////////////////////////////////////////////////////
+// TEXT
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        font-size: 1.7rem;
+      
+    }
+
+    &__text-inbox {
+        text-decoration: none;
+        color: $color-grey-light-2;
+        padding-top: .5rem;
+        transition: color .1s linear;
+
+        &:hover {
+            color: $color-light-blue;
+        }
+    }
+
+    &__text-today {
+        text-decoration: none;
+        color: $color-grey-light-2;
+        padding-top: 1.9rem;
+        transition: color .1s linear;
+
+        &:hover {
+            color: $color-light-blue;
+        }
+    }
+
+    &__text-next {
+        text-decoration: none;
+        color: $color-grey-light-2;
+        padding-top: 1.9rem;
+        transition: color .1s linear;
+
+        &:hover {
+            color: $color-light-blue;
+        }
+    }
+
+}
+
+///////////////////////////////////////////////////////////////////
+// BOTTOM SIDE OF NAV
+
+.nav-functions {
+    max-height: 58rem;
+    margin-top: 7rem;
+    min-height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-container {
+    @include nav-bottom-center;
+
+    &__circle-project {
+        @include svg-circle-nav;
+        background-color: $color-project-1;
+    }
+
+    &__svg-plus {
+      @include svg-nav;
+    }
+
+    &__option-list {
+        width: 100%;
+    }
+
+    &__item-list {
+        list-style-type: none;
+        padding: .5rem 2rem;
+    }
+
+    &__items {
+        font-size: 1.4rem;
+        margin-left: 4rem;
+        padding-top: .5rem;
+    }
+
+    &__items-name {
+        text-decoration: none;
+        color: $color-grey-light-2;
+        transition: color .1s linear;
+
+        &:hover {
+            color: #746CC0;
+        }
+    }
+}
+
+.labels-container {
+    @include nav-bottom-center;
+
+    &__circle-labels {
+        @include svg-circle-nav;
+        background-color: $color-labels-1;
+    }
+
+    &__svg-plus {
+        @include svg-nav;
+        margin-left: 2.2rem;
+    }
+}
+
+.filtres-container {
+    @include nav-bottom-center;
+
+    &__circle-filtres {
+        @include svg-circle-nav;
+        background-color: $color-filtres-1;
+    }
+
+    &__svg-plus {
+        @include svg-nav;
+        margin-left: 2rem;
+    }
+}
