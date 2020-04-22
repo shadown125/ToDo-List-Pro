@@ -8,7 +8,7 @@
     z-index: 9999;
     //opacity: 0;
     visibility: hidden;
-    transition: all .3s;
+    // transition: all .3s;
 
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
         -webkit-backdrop-filter: blur(10px);
@@ -19,14 +19,95 @@
     &__content {
         @include absCenter;
 
-        width: 400rem;
-        min-height: 250rem;
-        background-color: $color-white;
+        width: 45%;
+        background-color: $linear-gradient-header-1;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 15px;
         overflow: hidden;
         visibility: hidden;
-        transform: translate(-50%, -50%) scale(.25);
-        transition: all .5s .2s;
+        transform: translate(-50%, -50%);
+        // transition: all .5s .2s;
+    }
+
+    &__form {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 3rem 3rem 3rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: -7rem;
+    }
+
+    &__title-label {
+        font-size: 2rem;
+        color: $color-grey-light-2;
+    }
+
+    &__title {
+        
+        width: 75%;
+        font-family: inherit;
+        font-size: 1.6rem;
+        color: inherit;
+        background-color: $color-grey-light-2;
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+
+        &:focus {
+            outline: none;
+        }
+        
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+
+    &__description-label {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        color: $color-grey-light-2;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        font-family: inherit;
+        font-weight: inherit;
+        width: 75%;
+        padding: .7rem 2rem;
+        border-radius: 15px;
+        background-color: $color-grey-light-2;
+        color: inherit;
+        border: none;
+        resize: none;
+        outline: none;
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+        
+    }
+
+    &__svg-delete-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1.2rem 1.5rem;
+    }
+
+    &__svg-delete {
+        @include svg;
+        fill: $color-grey-light-4;
+        transition: fill .1s linear;
+    }
+
+    &__svg-button {
+        
+        :hover {
+            fill: red;
+        }
+        
     }
 }
