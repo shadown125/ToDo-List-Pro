@@ -25,3 +25,11 @@ Improve respons for big desktop,<br>
 Add new popup for tasks,<br>
 Add new options to nav-sidebar,<br>
 Add interaction to nav-svg and hover effect,<br>
+
+## Patch 0.04
+Add new svg,<br>
+Add delete button to Popup,<br>
+Add functionality to delete button,<br>
+Add style to Popup,<br>
+Add new structure to Popup,<br>
+Adjustments to add button<br>
