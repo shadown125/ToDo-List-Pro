@@ -9,6 +9,9 @@
     width: 2.5rem;
     height: 2.5rem;
     fill: $color-grey-light-2;
+    transition: fill .1s linear;
+
+    @content;
 }
 
 @mixin svg-interface {

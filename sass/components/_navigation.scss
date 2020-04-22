@@ -173,7 +173,15 @@
     }
 
     &__svg-plus {
-      @include svg-nav;
+
+        @include svg-nav;
+    }
+
+    &__svg-button {
+
+        :hover {
+            fill: $color-title;
+          }
     }
 
     &__option-list {
