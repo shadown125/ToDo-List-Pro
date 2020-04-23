@@ -18,6 +18,7 @@ class Popup {
 
         // button.addEventListener('click', displayPopup);
         // popupContentButton.addEventListener('click', hidePopup);
+       
     }
     
 }
