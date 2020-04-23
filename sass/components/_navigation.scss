@@ -230,6 +230,13 @@
             fill: $color-labels-1;
           }
     }
+
+    &__items-name {
+
+        &:hover {
+            color: $color-labels-1;
+        }
+    }
 }
 
 .filtres-container {
@@ -250,5 +257,12 @@
         :hover {
             fill: $color-filtres-1;
           }
+    }
+
+    &__items-name {
+
+        &:hover {
+            color: $color-filtres-1;
+        }
     }
 }
