@@ -6,12 +6,14 @@ class Popup {
         const popupContent = document.querySelector('.popup-task__content');
         const popupContentButton = document.querySelector('.popup-task__svg-button');
 
-        const displayPopup = () => {
+        const displayPopup = (e) => {
+            e.preventDefault();
             popup.style.visibility = "visible";
             popupContent.style.visibility = "visible";
         }
 
-        const hidePopup = () => {
+        const hidePopup = (e) => {
+            e.preventDefault();
             popup.style.visibility = "hidden";
             popupContent.style.visibility = "hidden";
         }

@@ -1,2 +1,3 @@
 
-const PopupButton = new Popup();
+const popupButton = new Popup();
+const plusNavSidebar = new SidebarNav();

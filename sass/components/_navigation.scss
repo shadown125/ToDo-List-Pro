@@ -189,6 +189,7 @@
     }
 
     &__item-list {
+        display: none;
         list-style-type: none;
         padding: .5rem 2rem;
     }
@@ -222,6 +223,13 @@
         @include svg-nav;
         margin-left: 2.2rem;
     }
+
+    &__svg-button {
+
+        :hover {
+            fill: $color-labels-1;
+          }
+    }
 }
 
 .filtres-container {
@@ -235,5 +243,12 @@
     &__svg-plus {
         @include svg-nav;
         margin-left: 2rem;
+    }
+
+    &__svg-button {
+
+        :hover {
+            fill: $color-filtres-1;
+          }
     }
 }
