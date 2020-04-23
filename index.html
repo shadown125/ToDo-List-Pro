@@ -208,17 +208,19 @@
 
                 </div>
 
-                <div class="todos">
+                <div class="todos" id="todos">
 
                     <div class="todos__title-wrapper">
                         <p class="todos__title">IN PROGRESS</p>
                         <div class="todos__today-wrapper">
                             <div class="todos__svg-circle">
-                                <button class="btn-svg task-add-button">
-                                    <svg class="todos__svg-add-circle">
-                                        <use xlink:href="img/sprite.svg#icon-circle-with-plus"></use>
-                                    </svg>
-                                </button>
+                                <a href="#popup-task">
+                                    <button class="btn-svg task-add-button">
+                                        <svg class="todos__svg-add-circle">
+                                            <use xlink:href="img/sprite.svg#icon-circle-with-plus"></use>
+                                        </svg>
+                                    </button>
+                                </a>
                             </div>
                             <svg class="todos__svg-clipboard">
                                 <use xlink:href="img/sprite.svg#icon-sticky-note"></use>
@@ -557,14 +559,16 @@
 
     </div>
 
-    <div class="popup-task">
+    <div class="popup-task" id="popup-task">
         <div class="popup-task__content">
             <div class="popup-task__svg-delete-wrapper">
-                <button class="btn-svg popup-task__svg-button">
-                    <svg class="popup-task__svg-delete">
-                        <use xlink:href="img/sprite.svg#icon-cancel-circle"></use>
-                    </svg>
-                </button>
+                <a href="#" class="popup-task__svg-ahref">
+                    <button class="btn-svg popup-task__svg-button">
+                        <svg class="popup-task__svg-delete">
+                            <use xlink:href="img/sprite.svg#icon-cancel-circle"></use>
+                        </svg>
+                    </button>
+                </a>
             </div>
             <form action="#" class="popup-task__form">
                 <label for="title" class="popup-task__title-label">Title:</label>
