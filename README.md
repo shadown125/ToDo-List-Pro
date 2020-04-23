@@ -33,3 +33,11 @@ Add functionality to delete button,<br>
 Add style to Popup,<br>
 Add new structure to Popup,<br>
 Adjustments to add button<br>
+
+## Patch 0.05
+Add new nav-Sidebar functionality,<br>
+new hover efect for each menu section in nav-Sidebar,<br>
+Modyficate html structure,<br>
+Rebuild popup from JS to HTML&CSS,<br>
+Popup has now new effects,<br>
+Add new links to a:href<br>
