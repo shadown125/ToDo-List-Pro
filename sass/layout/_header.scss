@@ -33,14 +33,18 @@
     &__input {
         font-family: inherit;
         font-size: 1.6rem;
-        color: inherit;
-        background-color: $color-grey-light-2;
+        color: $color-grey-light-3;
+        background-color: $color-dark-blue-1;
         border:none;
         padding: .7rem 2rem;
         border-radius: 100px;
         width: 90%;
         margin-right: -3.25rem;
         transition: width .1s linear;
+
+        &::placeholder {
+            color: $color-grey-light-3;
+        }
 
         @include respond(phone) {
             width: 100%;
@@ -49,7 +53,7 @@
         &:focus {
             outline: none;
             width: 100%;
-            background-color: $color-grey-light-3;
+            background-color: $color-dark-blue-1;
         }
 
         &:focus::placeholder {
@@ -60,13 +64,14 @@
 
     &__button {
         border:none;
-        background-color: $color-grey-light-2;
+        background-color: $color-dark-blue-1;
     }
 
     &__svg-glas {
         height: 2.3rem;
         width: 2.3rem;
-        fill: $color-grey-dark-2;
+        fill: $color-grey-light-3;
+
     }
 }
 
