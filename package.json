@@ -1,0 +1,22 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "Making functionality to app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadown125/ToDo-List-Pro.git"
+  },
+  "author": "Dawid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shadown125/ToDo-List-Pro/issues"
+  },
+  "homepage": "https://github.com/shadown125/ToDo-List-Pro#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.0"
+  }
+}

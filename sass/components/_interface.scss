@@ -106,9 +106,9 @@
         display: none;
     }
 
-    &__checkbox:checked ~ &__checkbox-container &__custom-checkbox::after {
-        display: block;
-    }
+    // &__checkbox:checked ~ &__checkbox-container &__custom-checkbox::after {
+    //     display: block;
+    // }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //HEADER MESSAGE
