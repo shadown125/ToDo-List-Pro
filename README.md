@@ -41,3 +41,15 @@ Modyficate html structure,<br>
 Rebuild popup from JS to HTML&CSS,<br>
 Popup has now new effects,<br>
 Add new links to a:href<br>
+
+## Patch 0.06
+
+Add new button to Popup,<br>
+Add node.js with npm packages,<br>
+Add new npm packages,<br>
+Add new build for css to optymalize Todo app,<br>
+Rebuild html,<br>
+Add functionality to popup,<br>
+Now u can add task to main,<br>
+Add jquery library,<br>
+Adjust progress header style<br>
