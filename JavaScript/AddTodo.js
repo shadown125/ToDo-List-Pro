@@ -7,6 +7,8 @@ class AddTodo {
         const addTaskButton = document.querySelector('.popup-task__button');
         const ulListTodo = document.querySelector('.main-content__list-items');
         const popup = document.querySelector('.popup-task');
+        const listItems = document.getElementsByClassName('main-content__item');
+        let mustDo = document.querySelector('.progression__must-do-task-counter')
 
         const addTask = (e) => {
             e.preventDefault();
@@ -20,6 +22,7 @@ class AddTodo {
             ulListTodo.appendChild(task);
             inputDescription.value = '';
             inputTitle.value = '';
+            mustDo.textContent = listItems.length;
             window.location.replace('#')
         }
 
