@@ -87,7 +87,7 @@
     &__next-days {
         @include svg-position {
             background-image: linear-gradient(to right bottom, $color-last-1, $color-last-2);
-            padding: .9rem;
+            padding: .7rem;
         }
      
     }
@@ -104,6 +104,12 @@
         fill: $color-grey-light-2;
         height: 2rem;
         width: 2rem;
+    }
+
+    &__svg-done {
+        fill: $color-grey-light-2;
+        height: 2.3rem;
+        width: 2.3rem;
     }
 
 ///////////////////////////////////////////////////////////////////
@@ -139,10 +145,10 @@
         }
     }
 
-    &__text-next {
+    &__text-done {
         text-decoration: none;
         color: $color-grey-light-2;
-        padding-top: 1.9rem;
+        padding-top: 2.1rem;
         transition: color .1s linear;
 
         &:hover {
