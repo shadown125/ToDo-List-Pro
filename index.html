@@ -200,9 +200,9 @@
                         </div>
                         <div class="progression__task-wrapper">
                             <span class="progression__done-tasks task-progression">Done Todo:
-                                <span class="progression__done-counter task-progression">2<span></span>
+                                <span class="progression__done-counter task-progression">2</span></span>
                             <span class="progression__must-do-task task-progression">Must Do: 
-                                <span class="progression__must-do-task-counter task-progression">5</span></span>
+                                <span class="progression__must-do-task-counter task-progression">5</span>
                         </div>
                     </div>
 
@@ -234,47 +234,59 @@
                     
 
                     <div class="main-content">
+                        <ul class="main-content__list-items">
 
-                        <div class="main-content__header">
-                            <div class="main-content__circle"></div>
-                            <p class="main-content__title">Wsdaf ds afl;sdajfk  jal;sfdlkfd;saf sdf</p>
-                            <div class="main-content__svg-wrapper">
+                            <!-- <li>
+                                <div class="main-content__header">
+                                    <div class="main-content__circle"></div>
+                                    <div class="main-content__header-wrapper">
+                                        <div class="main-content__title-wrapper">
+                                            <p class="main-content__title">Wsdaf ds afl;sdajfk  jal;sfdlkfd;saf sdf </p>
+                                        </div>
+                                            <div class="main-content__svg-wrapper">
 
-                                <div class="main-content__svg-circle-check">
-                                    <button class="btn-svg">
-                                        <svg class="main-content__svg-check">
-                                            <use xlink:href="img/sprite.svg#icon-check"></use>
-                                        </svg>
-                                    </button>
+                                                <div class="main-content__svg-circle-check">
+                                                    <button class="btn-svg">
+                                                        <svg class="main-content__svg-check">
+                                                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                <div class="main-content__svg-circle-message">
+                                                    <button class="btn-svg">
+                                                        <svg class="main-content__svg-message">
+                                                            <use xlink:href="img/sprite.svg#icon-bubble"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                <div class="main-content__svg-circle-attachment">
+                                                    <button class="btn-svg">
+                                                        <svg class="main-content__svg-attachment">
+                                                            <use xlink:href="img/sprite.svg#icon-link"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                    </div>
                                 </div>
 
-                                <div class="main-content__svg-circle-message">
-                                    <button class="btn-svg">
-                                        <svg class="main-content__svg-message">
-                                            <use xlink:href="img/sprite.svg#icon-bubble"></use>
-                                        </svg>
-                                    </button>
+                                <div class="main-content__text-container">
+                                    <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptas, sequi odit voluptatum quae, magni commodi nihil ratione labore illum assumenda. Dolorum laudantium dolor enim mollitia aliquid eaque, numquam accusamus.</p>
                                 </div>
+                            </li> -->
+                            </ul>
 
-                                <div class="main-content__svg-circle-attachment">
-                                    <button class="btn-svg">
-                                        <svg class="main-content__svg-attachment">
-                                            <use xlink:href="img/sprite.svg#icon-link"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+
                         </div>
 
-                        <div class="main-content__text-container">
-                            <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptas, sequi odit voluptatum quae, magni commodi nihil ratione labore illum assumenda. Dolorum laudantium dolor enim mollitia aliquid eaque, numquam accusamus.</p>
-                        </div>
-                    </div>
+
+                     
 
 
 
-
-                    <div class="main-content">
+                    <!-- <div class="main-content">
 
                         <div class="main-content__header">
                             <div class="main-content__circle"></div>
@@ -310,9 +322,9 @@
                         <div class="main-content__text-container">
                             <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptas, sequi odit voluptatum quae, magni commodi nihil ratione labore illum assumenda. Dolorum laudantium dolor enim mollitia aliquid eaque, numquam accusamus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi recusandae natus aliquam maiores minima cupiditate tempora nobis voluptas fugit, culpa rerum dolor exercitationem facere atque animi officia et a repellendus?</p>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="main-content">
+                    <!-- <div class="main-content">
 
                         <div class="main-content__header">
                             <div class="main-content__circle"></div>
@@ -348,7 +360,7 @@
                         <div class="main-content__text-container">
                             <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptas, sequi odit voluptatum quae, magni commodi nihil ratione labore illum assumenda. Dolorum laudantium dolor enim mollitia aliquid eaque, numquam accusamus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi recusandae natus aliquam maiores minima cupiditate tempora nobis voluptas fugit, culpa rerum dolor exercitationem facere atque animi officia et a repellendus?</p>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </section>
@@ -578,14 +590,13 @@
             </div>
             <form action="#" class="popup-task__form">
                 <label for="title" class="popup-task__title-label">Title:</label>
-                <input type="text" name="taskTitle" class="popup-task__title" id="title" placeholder="Add task title name">
+                <input type="text" name="taskTitle" class="popup-task__title" id="title" placeholder="Add task title name" maxlength="25">
                 <label for="description" class="popup-task__description-label">Description:</label>
-                <textarea name="message" class="popup-task__description" cols="30" rows="10" id="description" placeholder="Add here your description for your task"></textarea>
+                <textarea name="message" class="popup-task__description" cols="30" rows="10" id="description" placeholder="Add here your description for your task" maxlength="250"></textarea>
 
-                <div class="message-container__button popup-task__button-container">
-                    <button class="message-container__send-button popup-task__button">add task</button>
-                </div>
-
+                    <div class="message-container__button popup-task__button-container">
+                            <button class="message-container__send-button popup-task__button">add task</button>
+                    </div> 
             </form>
 
         </div>

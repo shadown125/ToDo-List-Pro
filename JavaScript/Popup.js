@@ -1,7 +1,7 @@
 // Popup
 class Popup {
     constructor() {
-        // const button = document.querySelector('.task-add-button');
+        // const button = document.querySelector('.popup-task__button');
         // const popup = document.querySelector('.popup-task');
         // const popupContent = document.querySelector('.popup-task__content');
         // const popupContentButton = document.querySelector('.popup-task__svg-button');

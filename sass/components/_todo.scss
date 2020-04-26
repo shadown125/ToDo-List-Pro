@@ -71,8 +71,14 @@
     &__header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
         margin-top: .1rem;
+        width: 100%;
+    }
+
+    &__header-wrapper {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
     }
 
@@ -91,7 +97,7 @@
         font-weight: 700;
         color: $color-grey-light-2;
         // width: 30%;
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 
     // WRAPPING SVG
@@ -164,7 +170,7 @@
     &__text-container {
         padding: 1rem 1.8rem;
         border-left: 2px solid $color-grey-dark-3;
-        width: 75%;
+        max-width: 75%;
         margin-left: .6rem;
         margin-top: -0.3rem;
 
@@ -175,5 +181,19 @@
 
     &__text {
         color: $color-grey-light-2;
+        width: 100%;
+    }
+
+
+    //LIST
+
+    &__list-items {
+        list-style: none;
+        // white-space: pre-wrap;
+    }
+
+    &__item {
+        width: 100%;
+        
     }
 }
