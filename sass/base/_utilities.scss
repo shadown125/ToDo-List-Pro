@@ -11,6 +11,10 @@
 
 .u-margin-left-medium {
     margin-left: 4rem !important;
+
+    @include respond(phone) {
+        margin-left: 1rem !important;
+    }
 }
 .u-margin-left-small {
     margin-left: 2rem !important;
@@ -28,3 +32,31 @@
 
 .u-margin-top-big { margin-top: 8rem !important; }
 .u-margin-top-huge { margin-top: 10rem !important; }
+
+.background-blur {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+}
+
+.background-ahref {
+    cursor: inherit;
+}

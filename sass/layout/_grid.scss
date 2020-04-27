@@ -5,18 +5,50 @@
     background-color: $color-primary-1;
     border-radius: 15px;
     min-height: 70rem;
+    overflow: hidden;
 
     @include respond(2k-desktop) {
         max-width: 170rem;
     }
 
+    @include respond(tab-land-very-big) {
+        max-width: 145rem;
+    }
+
+    @include respond(tab-land-medium-big) {
+        max-width: 135rem;
+    }
+
     @include respond(tab-land-big) {
-        max-width: 130rem;
+        max-width: 120rem;
+    }
+
+    @include respond(tab-land-small) {
+        max-width: 110rem;
     }
 
     @include respond(tab-land) {
         max-width: 100rem;
     }    
+
+    @include respond(tab-port-very-big) {
+        max-width: 90rem;
+    }
+
+    @include respond(tab-port-small) {
+        max-width: 80rem;
+    }
+
+    @include respond(tablet) {
+        max-width: 70rem;
+    }
+
+    @include respond(phone) {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        
+    }
 
     
 
@@ -29,15 +61,32 @@
     border-bottom-left-radius: 15px; 
 
     @include respond(tab-land) {
-        width: 40%;
+        width: 30%;
         border-bottom-right-radius: 15px;
     }    
+
+    @include respond(phone) {
+        // visibility: hidden;
+        // display: none;
+        width: 60%;
+        position: absolute;
+        top: 0;
+        left: -60%;
+        height: 90vh;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+        z-index: 2;
+    }
 }
 
 .main {
     display: flex;
     min-height: 90rem;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
+
+    @include respond(phone) {
+        position: relative;
+    }
 }
 
 .content {
@@ -47,8 +96,14 @@
 
     @include respond (tab-land) {
         order: 1;
-        width: 100%;
+        width: 70%;
         padding-right: 3rem;
+    }
+
+    @include respond (phone) {
+        width: 100%;
+        height: 90vh;
+        border-radius: 0;
     }
 }
 
@@ -59,7 +114,15 @@
     padding: 3rem;
 
     @include respond(tab-land) {
+        visibility: hidden;
+        display: none;
         width: 60%;
         padding-bottom: 0;
-    }    
+    } 
+    
+    @include respond (phone) {
+        width: 100%;
+        position: absolute;
+        // z-index: 1;
+    }
 }

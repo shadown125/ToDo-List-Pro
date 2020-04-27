@@ -1,5 +1,8 @@
 .heading-primary {
 
+    @include respond(phone) {
+        font-size: 3rem;
+    }
 }
 
 .heading-secondary {

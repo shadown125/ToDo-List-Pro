@@ -12,6 +12,17 @@
 <body>
     <div class="container">
         <header class="header">
+
+            <span class="menu">
+                <a href="#background-blur">
+                    <button class="btn-svg menu__btn">
+                        <svg class="menu__svg">
+                            <use xlink:href="img/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </button>
+                </a>
+            </span>
+
             <div class="header__title">
                 <svg class="svg header__svg-logo u-margin-left-medium">
                     <use xlink:href="img/sprite.svg#icon-qq"></use>
@@ -19,8 +30,10 @@
                 <h1 class="heading-primary u-margin-left-medium">Todo List</h1> 
             </div>
 
+            
+
             <form action="#" class="search">
-                <input type="text" class="search__input" placeholder="Search for task">
+                <input type="text" class="search__input" placeholder="Search for task" >
                 <button class="btn-svg search__button">
                     <svg class="search__svg-glas">
                         <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
@@ -526,8 +539,12 @@
         </div>
     </div>
 
+    <a href="#" class="background-ahref"> -->
+        <div class="background-blur" id="background-blur"></div>
+    </a>
     <script src="library/jquery-3.5.0.min.js"></script>
     <script src="JavaScript/AddTodo.js"></script>
+    <script src="JavaScript/Mobile.js"></script>
     <script src="JavaScript/Popup.js"></script>
     <script src="JavaScript/SidebarNav.js"></script>
     <script src="JavaScript/main.js"></script>

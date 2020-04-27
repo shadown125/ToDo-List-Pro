@@ -4,6 +4,7 @@
     flex: 0 0 100%;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
    // background-image: linear-gradient(to left bottom , $linear-gradient-header-1,$linear-gradient-header-2);
     background-color: $linear-gradient-header-1;
     height: 10vh;
@@ -11,10 +12,19 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
+    @include respond(phone) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
     &__title {
         display: flex;
         font-size: 1.7rem;
         color: white;
+
+        @include respond(phone) {
+            margin: 0 auto;
+        }
     }
 
     &__svg-logo {
@@ -29,6 +39,11 @@
         flex: 0 0 40%;
         align-items: center;
         justify-content: center;
+
+        @include respond(phone) {
+            flex: 0 0 80%;
+            margin: auto;
+        }
 
     &__input {
         font-family: inherit;
@@ -46,7 +61,7 @@
             color: $color-grey-light-3;
         }
 
-        @include respond(phone) {
+        @include respond(tab-land) {
             width: 100%;
         }
 
@@ -79,6 +94,11 @@
     display: flex;
     flex-basis: 20%;
     padding-right: 2rem;
+
+    @include respond(phone) {
+        visibility: hidden;
+        display: none;
+    }
 
     &__list {
         list-style-type: none; 
@@ -140,5 +160,27 @@
         text-decoration: none;
         color: white;
         border-radius: 15px;
+    }
+}
+
+.menu {
+    display:none;
+    visibility: hidden;
+
+    @include respond (phone) {
+        display: block;
+        visibility: visible;
+        // padding-right: 7rem;
+        margin-right: -4rem;
+    }
+
+    &__svg {
+        height: 3.3rem;
+        width: 3.3rem;
+        fill: $color-grey-light-3;
+    }
+
+    &__btn {
+        padding: .2rem;
     }
 }
