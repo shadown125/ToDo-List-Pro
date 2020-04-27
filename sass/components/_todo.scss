@@ -150,18 +150,18 @@
 
     &__svg-circle-attachment {
         @include svg-circle-main;
-        background-color: $color-title-main-2;
-        padding: .4rem;
+        background-color: $color-title;
+        padding: .19rem;
         position: relative;
 
         @include button-animated-svg {
-            background-color: $color-title-main-2;
+            background-color: $color-title;
         };
     }
 
     &__svg-attachment {
-        width: 2.1rem;
-        height: 2.1rem;
+        width: 2.4rem;
+        height: 2.4rem;
         fill: $color-grey-light-2;
     }
 
