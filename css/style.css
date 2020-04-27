@@ -43,7 +43,7 @@ body {
   min-height: 100vh; }
   @media only screen and (max-width: 37em) {
     body {
-      min-height: 0; } }
+      min-height: 0vh; } }
 
 @media only screen and (max-width: 37em) {
   .heading-primary {
@@ -659,6 +659,18 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .5s .2s; }
+    @media only screen and (max-width: 87.5em) {
+      .popup-task__content {
+        width: 50%; } }
+    @media only screen and (max-width: 81.25em) {
+      .popup-task__content {
+        width: 55%; } }
+    @media only screen and (max-width: 62.5em) {
+      .popup-task__content {
+        width: 65%; } }
+    @media only screen and (max-width: 37em) {
+      .popup-task__content {
+        width: 85%; } }
   .popup-task:target .popup-task__content {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
@@ -726,6 +738,10 @@ body {
     justify-content: flex-end;
     margin-top: 2rem;
     margin-right: 27rem; }
+    @media only screen and (max-width: 37em) {
+      .popup-task__button-container {
+        justify-content: center;
+        margin-right: 0; } }
   .popup-task__button {
     background-color: #26F596;
     color: #009FFD; }
@@ -1058,7 +1074,8 @@ body {
     .container {
       max-width: 100%;
       margin: 0;
-      border-radius: 0; } }
+      border-radius: 0;
+      min-height: 100%; } }
 
 .sidebar {
   width: 20%;
@@ -1099,7 +1116,7 @@ body {
   @media only screen and (max-width: 37em) {
     .content {
       width: 100%;
-      height: 90vh;
+      min-height: 80vh;
       border-radius: 0; } }
 
 .interface {
