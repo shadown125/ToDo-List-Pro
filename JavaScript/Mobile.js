@@ -19,10 +19,17 @@ class Mobile {
             //     inbox.style.visibility = "hidden";
             // }
 
-            if(window.innerWidth > 600 && inbox.style.display === "block" || inbox.style.visibility === "visible") {
+            if(window.innerWidth > 600 && inbox.style.display === "block" && inbox.style.visibility === "visible" && todoContent.style.display === "none" || todoContent.style.visibility === "hidden") {
+
                 todoContent.style.display = 'none';
                 todoContent.style.visibility = "hidden"
                 console.log('lol')
+
+            } else if (window.innerWidth > 600 && window.innerWidth < 1200 && inbox.style.display === "block" || inbox.style.visibility === "visible" && todoContent.style.display === "block" || todoContent.style.visibility === "visible") {
+
+                inbox.style.display = 'none';
+                inbox.style.visibility = "hidden";
+                
             }
 
             if (window.innerWidth > 1200) {
