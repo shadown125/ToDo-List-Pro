@@ -10,6 +10,8 @@ class AddTodo {
         const popup = document.querySelector('.popup-task');
         const listItems = document.getElementsByClassName('main-content__item');
         const mustDo = document.querySelector('.progression__must-do-task-counter');
+        const doneTasks = document.querySelector('.progression__done-counter')
+        let counter = 0;
 
         const removeTask = (e) => {
            // e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();
@@ -34,6 +36,33 @@ class AddTodo {
             
         }
 
+        const completeTask = (e) => {
+            counter++;
+
+            let index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+            if (index) {
+                toDoList.splice(index, 1);
+            // console.log(toDoList)
+            console.log(index)
+            mustDo.textContent = listItems.length - 1;
+            
+            renderList();
+            } else {
+                index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+
+                toDoList.splice(index, 1);
+            // console.log(toDoList)
+            console.log(index)
+            mustDo.textContent = listItems.length - 1;
+            
+            renderList();
+            }
+
+            doneTasks.textContent = counter.toString();
+            console.log(counter)
+            console.log(mustDo)
+        }
+
         const addTask = (e) => {
             e.preventDefault();
             let titleText = inputTitle.value;
@@ -53,7 +82,7 @@ class AddTodo {
             window.location.replace('#')
 
             task.querySelector('.main-content__svg-circle-attachment').addEventListener('click', removeTask);
-            task.querySelector('.main-content__svg-circle-check').addEventListener('click', removeTask);
+            task.querySelector('.main-content__svg-circle-check').addEventListener('click', completeTask);
         }
 
 

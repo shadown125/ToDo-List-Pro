@@ -796,7 +796,7 @@ body {
     border-radius: 15px;
     margin-left: .3rem; }
   .progression__bar {
-    width: 33%;
+    width: 0%;
     height: .3rem;
     background-color: green;
     border-radius: 15px; }
