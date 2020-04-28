@@ -1128,7 +1128,7 @@ body {
     .interface {
       visibility: hidden;
       display: none;
-      width: 60%;
+      width: 100%;
       padding-bottom: 0; } }
   @media only screen and (max-width: 37em) {
     .interface {
