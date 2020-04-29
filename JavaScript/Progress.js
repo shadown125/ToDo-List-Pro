@@ -5,11 +5,15 @@ class Progress {
         const progressLine = document.querySelector('.progression__bar');
         const doneTodoCounter = document.querySelector('.progression__done-counter')
         const mustDoCounter = document.querySelector('.progression__must-do-task-counter')
-        const nowTime = new Date().getDate();
-        const nowMonth = new Date().getMonth();
+        
 
 
         // DATE
+        setInterval(() => {
+
+        const nowTime = new Date().getDate();
+        const nowMonth = new Date().getMonth();
+
         dateNumber.textContent = nowTime;
 
         if(nowMonth === 0) {
@@ -38,6 +42,9 @@ class Progress {
             monthDate.textContent = 'DEC'
         }
 
+        }, 100)
+        
+
         // PROGRESSION LINE
 
         
@@ -51,10 +58,6 @@ class Progress {
             let percent = doneTodoNumber * 100 / total;
         
             progressLine.style.width = `${percent}%`
-
-            console.log(percent)
-            console.log(total)
-            console.log(doneTodoNumber)
         }, 500)
         
         

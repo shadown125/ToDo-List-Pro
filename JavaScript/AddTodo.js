@@ -10,17 +10,21 @@ class AddTodo {
         const popup = document.querySelector('.popup-task');
         const listItems = document.getElementsByClassName('main-content__item');
         const mustDo = document.querySelector('.progression__must-do-task-counter');
-        const doneTasks = document.querySelector('.progression__done-counter')
+        const doneTasks = document.querySelector('.progression__done-counter');
+
+        const doneTodosUl = document.querySelector('.done-todos__item-list');
+
+        let index;
         let counter = 0;
 
         const removeTask = (e) => {
            // e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();
-            let index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+            index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
             if (index) {
                 toDoList.splice(index, 1);
             // console.log(toDoList)
             console.log(index)
-            mustDo.textContent = listItems.length - 1;
+            mustDo.textContent = toDoList.length;
             
             renderList();
             } else {
@@ -28,39 +32,47 @@ class AddTodo {
 
                 toDoList.splice(index, 1);
             // console.log(toDoList)
-            console.log(index)
-            mustDo.textContent = listItems.length - 1;
+            // console.log(index)
+            mustDo.textContent = toDoList.length;
             
+            console.log(toDoList)
             renderList();
             }
             
         }
 
         const completeTask = (e) => {
+           
+            //Adding
             counter++;
 
-            let index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+
+            index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+            
             if (index) {
+                e.target.parentNode.parentNode.parentNode.parentNode.remove();
+
+                doneTodosUl.appendChild(toDoList[index]);
                 toDoList.splice(index, 1);
-            // console.log(toDoList)
-            console.log(index)
-            mustDo.textContent = listItems.length - 1;
+                // console.log(toDoList)
+                // console.log(index)
+                mustDo.textContent = toDoList.length;
             
             renderList();
             } else {
                 index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
 
+                e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();
+                doneTodosUl.appendChild(toDoList[index]);
+
                 toDoList.splice(index, 1);
             // console.log(toDoList)
-            console.log(index)
-            mustDo.textContent = listItems.length - 1;
-            
-            renderList();
+                
+                mustDo.textContent = toDoList.length;
+                renderList();
             }
-
+            // console.log(toDoList)
             doneTasks.textContent = counter.toString();
-            console.log(counter)
-            console.log(mustDo)
         }
 
         const addTask = (e) => {
@@ -78,7 +90,7 @@ class AddTodo {
             // ulListTodo.appendChild(task);
             inputDescription.value = '';
             inputTitle.value = '';
-            mustDo.textContent = listItems.length;
+            mustDo.textContent = toDoList.length;
             window.location.replace('#')
 
             task.querySelector('.main-content__svg-circle-attachment').addEventListener('click', removeTask);
