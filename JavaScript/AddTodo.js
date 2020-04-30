@@ -1,6 +1,6 @@
 class AddTodo {
     constructor() {
-        const toDoList = [];
+        let toDoList = [];
 
         const inputTitle = document.querySelector('.popup-task__title'); 
         const inputDescription = document.querySelector('.popup-task__description');
@@ -13,6 +13,7 @@ class AddTodo {
         const doneTasks = document.querySelector('.progression__done-counter');
 
         const doneTodosUl = document.querySelector('.done-todos__item-list');
+        const searchInput = document.querySelector('.search__input');
 
         let index;
         let counter = 0;
@@ -93,8 +94,8 @@ class AddTodo {
             mustDo.textContent = toDoList.length;
             window.location.replace('#')
 
-            task.querySelector('.main-content__svg-circle-attachment').addEventListener('click', removeTask);
-            task.querySelector('.main-content__svg-circle-check').addEventListener('click', completeTask);
+            task.querySelector('.main-content__svg-attachment').addEventListener('click', removeTask);
+            task.querySelector('.main-content__svg-check').addEventListener('click', completeTask);
         }
 
 
@@ -107,6 +108,21 @@ class AddTodo {
         }
         addTaskButton.addEventListener('click', addTask);
 
+        //SEARCHING ITEMS
+
+        const searchTask = (e) => {
+            e.preventDefault();
+            const searchText = e.target.value.toLowerCase().trim();
+            ulListTodo.textContent = "";
+            let filtrList = toDoList.filter((filtrLi) => {
+                return filtrLi.textContent.toLowerCase().includes(searchText);
+            })
+            filtrList.forEach(filtrLi => {
+                ulListTodo.appendChild(filtrLi);
+            })
+        }
+
+        searchInput.addEventListener('input', searchTask);
     }
 
 }
