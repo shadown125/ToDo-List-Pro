@@ -43,8 +43,9 @@
 .chat-container {
     display: flex;
     flex-direction: column;
-    border-bottom: solid 2px $color-grey-dark-3;
+    border-bottom: solid 2px $color-grey-dark-1;
     align-self: flex-start;
+    padding-bottom: .7rem;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //Profile left
@@ -65,14 +66,13 @@
        cursor: pointer;
        font-size: 1.5rem;
        margin-left: 2.5rem;
-       user-select: none;
        
     }
 
     &__custom-checkbox {
         position: absolute;
         top: 0;
-        left: 0;
+        left: -.8rem;
         height: 1.7rem;
         width: 1.7rem;
         background-color: $linear-gradient-bgc-2;
@@ -80,26 +80,41 @@
         box-shadow: 1rem 2rem 6rem rgba(0,0,0,.7);
         transition: all .2s linear;
 
-        // &:checked {
+        // &:target {
         //     background-color: blue;
         // }
 
         &:hover {
-            background-color: grey;
+            background-color: $color-light-violet;
         }
 
-        &::after {
-            content: "";
-            position: absolute;
-            display: none;
-            left: 9px;
-            top: 5px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            transform: rotate(45deg);
-        }
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     display: none;
+        //     left: 9px;
+        //     top: 5px;
+        //     width: 5px;
+        //     height: 10px;
+        //     border: solid white;
+        //     border-width: 0 3px 3px 0;
+        //     transform: rotate(45deg);
+            
+        // }
+
+        
+    }
+
+    &__custom-checkbox-inner {
+        position: absolute;
+        display: none;
+        left: .5rem;
+        top: .1rem;
+        width: .7rem;
+        height: 1.2rem;
+        border: solid $color-title-main-2;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
     }
 
     &__checkbox {
@@ -176,7 +191,6 @@
 
     &__wrapper-img {
         width: 30%;
-
     }
 
     &__main-message {
@@ -291,5 +305,9 @@
         position: relative;
         
         @include button-animated;
+    }
+
+    &__delete-ahref {
+        
     }
 }
