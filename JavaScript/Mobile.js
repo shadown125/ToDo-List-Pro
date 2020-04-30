@@ -9,6 +9,7 @@ class Mobile {
 
         const todoContent = document.querySelector('.content')
         const today = document.querySelector('.profile-menu__text-today');
+        const doneTodos = document.querySelector('.profile-menu__text-done')
         let size = 600
         
         
@@ -44,6 +45,8 @@ class Mobile {
 
         const showSidebar = () => {
             sidebar.style.left = "0"
+
+            
         }
 
         const hideSidebar = () => {
@@ -91,6 +94,7 @@ class Mobile {
         inboxText.addEventListener('click', inboxContent)
         background.addEventListener('click', hideSidebar)
         buttonNav.addEventListener('click', showSidebar);
+        doneTodos.addEventListener('click', hideSidebar)
 
         
     }
