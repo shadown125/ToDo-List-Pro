@@ -7,7 +7,6 @@
     flex-wrap: wrap;
    // background-image: linear-gradient(to left bottom , $linear-gradient-header-1,$linear-gradient-header-2);
     background-color: $linear-gradient-header-1;
-    height: 10vh;
     padding: 1rem;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -127,41 +126,41 @@
    
 }
 
-.icons-box {
-    display:none;
-    position: absolute;
-    background-color: $linear-gradient-header-1;
-    border-radius: 15px; 
+// .icons-box {
+//     display:none;
+//     position: absolute;
+//     background-color: $linear-gradient-header-1;
+//     border-radius: 15px; 
 
-    // UL
-    &__settings {
-        list-style-type: none;
+//     // UL
+//     &__settings {
+//         list-style-type: none;
         
-    }
+//     }
 
-    //LI
-    &__settings-item {
+//     //LI
+//     &__settings-item {
         
-        font-size: 1.5rem;
+//         font-size: 1.5rem;
         
-        width: 100%;
+//         width: 100%;
         
 
-        :hover {
-            background-color: $color-grey-light-4;
-            display: block;
-            // opacity: .4;
-        }
-    }
+//         :hover {
+//             background-color: $color-grey-light-4;
+//             display: block;
+//             // opacity: .4;
+//         }
+//     }
 
-    &__settings-item-link {
-        display: block;
-        padding: 1rem 1.5rem;
-        text-decoration: none;
-        color: white;
-        border-radius: 15px;
-    }
-}
+//     &__settings-item-link {
+//         display: block;
+//         padding: 1rem 1.5rem;
+//         text-decoration: none;
+//         color: white;
+//         border-radius: 15px;
+//     }
+// }
 
 .menu {
     display:none;

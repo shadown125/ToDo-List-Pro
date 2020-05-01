@@ -58,12 +58,14 @@
                         </button>
                      </li>
                     <li class="icons__single-item">
-                      <button class="btn-svg">
-                         <svg class="svg icons__svg-config">
-                             <use xlink:href="img/sprite.svg#icon-cog"></use>
-                        </svg>
-                     </button>
-                     <div class="icons-box">
+                        <a href="#popup-settings">
+                            <button class="btn-svg icons__btn-config">
+                                <svg class="svg icons__svg-config">
+                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
+                                </svg>
+                            </button>
+                        </a>
+                     <!-- <div class="icons-box">
                         <ul class="icons-box__settings">
                             <li class="icons-box__settings-item" data-item="Settings" role="menuitem">
                                 <a href="#" class="icons-box__settings-item-link">Change Color</a>
@@ -76,7 +78,7 @@
                             </li>
                             
                         </ul>
-                    </div>
+                    </div> -->
                     </li>
                 </ul>
             </nav>
@@ -335,7 +337,7 @@
                                     <div class="chat-container__custom-checkbox-inner"></div>
                                 </div>
                             </label>
-                                <h3 class="heading-tertiary chat-container__name">Chuck Norris</h3>
+                                <h3 class="heading-tertiary chat-container__name">Hello there!!!</h3>
                                 <button class="btn-svg">
                                     <svg class="chat-container__svg-link">
                                         <use xlink:href="img/sprite.svg#icon-link"></use>
@@ -360,8 +362,8 @@
                             </div>
                             <div class="chat-container__wrapper-message">
                                 
-                                <h4 class="heading-fourthly">Can we make so activity</h4>
-                                <p class="chat-container__main-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eos temporibus sapiente  iure delectus tempore sequi maiores tempora quasi, non autem.</p>
+                                <h4 class="heading-fourthly">Let me tell you how to use this app</h4>
+                                <p class="chat-container__main-message">U can use this green add button to add your first todo, after u add your myst do counter will count your all todo for this day, if you will done with todo then u can use check button to remove the todo and add it to done Todos section, if you misspel your todo but already added, then u can use bubble button to edit your todo, if u don't want to do this todo then use delete button, u can also change color of this todo application to your preferences in filtres section, if u have to many todos and u don't want to scroll then u can use search input in top of todo app to search your todo. If u want to remove your chat meseeges then click this checkbox at the top of picture and then the delete button on the bottom of inbox.</p>
                             </div>
                         </div>
                     </div>
@@ -436,7 +438,7 @@
                 <label for="title" class="popup-task__title-label">Title:</label>
                 <input type="text" name="taskTitle" class="popup-task__title" id="title" placeholder="Add task title name" maxlength="25">
                 <label for="description" class="popup-task__description-label">Description:</label>
-                <textarea name="message" class="popup-task__description" cols="30" rows="10" id="description" placeholder="Add here your description for your task" maxlength="250"></textarea>
+                <textarea name="message" class="popup-task__description" cols="30" rows="10" id="description" placeholder="Add here your description for your task (Optional)" maxlength="250"></textarea>
 
                     <div class="message-container__button popup-task__button-container">
                             <button class="message-container__send-button popup-task__button">add task</button>
@@ -444,6 +446,51 @@
             </form>
 
         </div>
+    </div>
+
+    <div class="popup-settings" id="popup-settings">
+        <div class="popup-settings__content">
+
+            <div class="popup-settings__btn-wrapper">
+                <a href="#" class="popup-task__svg-ahref popup-settings__svg-ahref">
+                    <button class="btn-svg popup-settings__svg-button">
+                        <svg class="popup-task__svg-delete ">
+                            <use xlink:href="img/sprite.svg#icon-cancel-circle"></use>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+            <div class="profile-box popup-settings__profile-wrapper">
+                <img src="img/img-1.jpg" alt="User photo" class="profile-box__profile popup-settings__profile-img">
+                <div class="profile-box__text">
+                    <span class="profile-box__user-name">Wukong</span>
+                    <span class="profile-box__user-experience">lorem ipsum</span>
+                </div>
+            </div>
+
+            <div class="popup-settings__main-content">
+                <div class="popup-settings__options-list">
+                    <p class="popup-settings__option">Change Name</p>
+                </div>
+                <div class="popup-settings__options-list">
+                    <p class="popup-settings__option">Change Profession</p>
+                </div>
+                <div class="popup-settings__options-list">
+                    <p class="popup-settings__option">Add new profile image</p>
+                </div>
+                <div class="popup-settings__options-list">
+                    <p class="popup-settings__option">Change Language</p>
+                </div>
+                <div class="popup-settings__options-list">
+                    <p class="popup-settings__option">Delete Profile</p>
+                </div>
+                <div class="popup-settings__options-list">
+                    <p class="popup-settings__option">Log out</p>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
     <a href="#" class="background-ahref">
@@ -455,6 +502,7 @@
     <script src="JavaScript/Colors.js"></script>
     <script src="JavaScript/DoneTodo.js"></script>
     <script src="JavaScript/Mobile.js"></script>
+    <script src="JavaScript/Options.js"></script>
     <script src="JavaScript/Popup.js"></script>
     <script src="JavaScript/Progress.js"></script>
     <script src="JavaScript/SidebarNav.js"></script>
