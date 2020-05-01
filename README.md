@@ -53,3 +53,24 @@ Add functionality to popup,<br>
 Now u can add task to main,<br>
 Add jquery library,<br>
 Adjust progress header style<br>
+
+## Patch 0.1 Alpha
+Add new svg,<br>
+Remove nest 7 days button in navigation instead add done todos button,<br>
+New color for chat,<br>
+Add counter which will counter todos,<br>
+Add new svg icon,<br>
+Removed attachment icon,<br>
+Add remove button,<br>
+Add functionality to remove button,<br>
+New styles for remove button,<br>
+Add new functionality which will track Todo in Progress section,<br>
+Optymize respons for all devices and added new respons for mobiles,<br>
+Now u can swap between done todos, today and inbox,<br>
+Add new background effect while being in menu in Mobile devices,<br>
+Now u can use check and delete button in added todos,<br>
+Optymalize app,<br>
+Now progress line show your todo progress,<br>
+Now u can search for tasks,<br>
+Now u can swap colors in your app,<br>
+Now u can remove Messeges from inbox-chat<br>
