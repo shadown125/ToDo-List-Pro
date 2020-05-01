@@ -43,21 +43,26 @@
 
             <nav class="icons">
                 <ul class="icons__list">
-                    <li class="icons__single-item">
+                    <li class="icons__single-item-1">
                          <button class="btn-svg">
                              <svg class="svg icons__svg-circle">
                                   <use xlink:href="img/sprite.svg#icon-circle-with-plus"></use>
                               </svg>
                          </button>
                      </li>
-                     <li class="icons__single-item">
-                         <button class="btn-svg">
+                     <li class="icons__single-item-2">
+                         
+                         <button class="btn-svg icons__svg-btn">
                              <svg class="svg icons__svg-globe">
                                  <use xlink:href="img/sprite.svg#icon-globe"></use>
                              </svg>
+                             <div class="icons__messeges-count">
+                                <p class="icons__count">1</p>
+                            </div>
                         </button>
+                        
                      </li>
-                    <li class="icons__single-item">
+                    <li class="icons__single-item-3">
                         <a href="#popup-settings">
                             <button class="btn-svg icons__btn-config">
                                 <svg class="svg icons__svg-config">
@@ -93,6 +98,9 @@
                             <span class="profile-box__user-name">Wukong</span>
                             <span class="profile-box__user-experience">lorem ipsum</span>
                         </div>
+                        <div class="profile-box__level-circle">
+                            <p class="profile-box__levels">1</p>
+                        </div>
                     </div>
                     <div class="profile-menu">
 
@@ -114,12 +122,20 @@
                                         <use xlink:href="img/sprite.svg#icon-note-checked"></use>
                                     </svg>
                             </div>
+
+                            <div class="profile-menu__progression-icon">
+                                <svg class="profile-menu__svg-done">
+                                    <use xlink:href="img/sprite.svg#icon-flash"></use>
+                                </svg>
+                            </div>
                         </div>
 
                         <div class="profile-menu__text">
                             <a href="#" class="profile-menu__text-inbox">Inbox</a>
                             <a href="#" class="profile-menu__text-today">Today</a>
                             <a href="#" class="profile-menu__text-done">Done Todos</a>
+                            <p class="profile-menu__coming">Coming soon...</p>
+                            <p class="profile-menu__progression">Progressions</p>
                         </div>
                     </div>
 
@@ -343,7 +359,7 @@
                                         <use xlink:href="img/sprite.svg#icon-link"></use>
                                     </svg>
                                 </button>
-                                <p class="chat-container__text">30 minutes ago</p>
+                                <p class="chat-container__text">1 seconds ago</p>
                                 <div class="chat-container__svg-circle">
                                     <button class="btn-svg">
                                         <svg class="chat-container__svg-arrow">

@@ -1,6 +1,6 @@
 @mixin svg {
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3rem;
+    width: 3rem;
     @content;
 }
 
@@ -178,6 +178,18 @@
         background-color: rgba($color-black, .3);
     }
 
+    @content;
+}
+
+@mixin headerNavSvg {
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: $color-dark-blue-1;
+
+    &:hover {
+        background-color: $color-light-blue;
+    }
     @content;
 }
 
