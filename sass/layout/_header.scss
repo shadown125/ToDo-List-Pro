@@ -108,7 +108,7 @@
  
      &__single-item-1 {
         @include headerNavSvg;
-        padding: .75rem;
+        padding: .7rem;
      }
 
      &__single-item-2 {
@@ -127,12 +127,12 @@
 
     &__svg-circle {
         fill: $color-grey-light-3;
-        margin-left: .1rem;
+        
     }
 
     &__svg-globe {
         fill: $color-grey-light-3;
-        margin-left: -1.7rem;
+        margin-left: -1.9rem;
     }
 
     &__svg-config {
