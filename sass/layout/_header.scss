@@ -93,6 +93,7 @@
     display: flex;
     flex-basis: 20%;
     padding-right: 2rem;
+    position: relative;
 
     @include respond(phone) {
         visibility: hidden;
@@ -114,6 +115,7 @@
      &__single-item-2 {
         @include headerNavSvg;
         padding: .7rem;
+        position: relative;
      }
 
      &__single-item-3 {
@@ -159,6 +161,34 @@
         margin-top: .3rem;
     }
 
+    &__messeges-wrapper {
+        position: absolute;
+        display: none;
+        width: 32rem;
+        height: 30rem;
+        background-color: $color-dark-blue-1;
+        margin-top: 5.6rem;
+        border-radius: 15px;
+        z-index: 99;
+    }
+
+    &__messeges-container {
+        max-height: 12rem;
+        overflow: hidden;
+        padding: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 15px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-grey-dark-2;
+        }
+    }
+
+    &__meseges-chat-container {
+        max-height: 9rem;
+        overflow: hidden;
+    }
    
 }
 

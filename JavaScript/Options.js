@@ -1,14 +1,18 @@
 class Options {
     constructor() {
-        const buttonConfig = document.querySelector('.icons__btn-config');
-        const svgConfig = document.querySelector('.icons__svg-config');
+        const messegesContainer = document.querySelector('.icons__messeges-wrapper ')
+        const messegesIcon = document.querySelector('.icons__single-item-2')
 
-        const showSettingPopup = () => {
-            
+        const showMesseges = () => {
+
+            if(messegesContainer.style.display === "block") {
+                messegesContainer.style.display = 'none'
+                return;
+            }
+
+            messegesContainer.style.display = 'block'
         }
 
-
-        buttonConfig.addEventListener('click', showSettingPopup);
-        svgConfig.addEventListener('click', showSettingPopup);
+        messegesIcon.addEventListener('click', showMesseges)
     }
 }
