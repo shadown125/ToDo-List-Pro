@@ -85,8 +85,25 @@ class Mobile {
             todoContent.style.display = "block";
             todoContent.style.visibility = "visible";
 
+            
+
         }
     }
+
+        const doneTodoContent = () => {
+            if(window.innerWidth < 1200) {
+                if(inbox.style.display === "block" || inbox.style.visibility === "visible" ) {
+                    inbox.style.display = 'none';
+                    inbox.style.visibility = "hidden";
+                }
+
+                doneTodos.style.display = "block";
+                doneTodos.style.visibility = "visible";
+                
+                todoContent.style.display = "block";
+                todoContent.style.visibility = "visible";
+            }
+        }
     
 
         window.addEventListener('resize', preventBug)
@@ -94,7 +111,8 @@ class Mobile {
         inboxText.addEventListener('click', inboxContent)
         background.addEventListener('click', hideSidebar)
         buttonNav.addEventListener('click', showSidebar);
-        doneTodos.addEventListener('click', hideSidebar)
+        doneTodos.addEventListener('click', hideSidebar);
+        doneTodos.addEventListener('click', doneTodoContent);
 
         
     }
