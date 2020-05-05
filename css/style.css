@@ -438,6 +438,46 @@ body {
       transition: all .4s;
       background-color: #009FFD; }
 
+.progression-levels {
+  width: 100%;
+  min-height: 85rem;
+  background-color: #2a314f;
+  padding: 2rem;
+  visibility: hidden;
+  display: none; }
+  .progression-levels__content {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/img-4.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    padding: 3rem; }
+  .progression-levels__background-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px; }
+
+.levels {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .levels__main-level {
+    width: 90%;
+    height: 3rem;
+    border: 3px solid red;
+    border-radius: 15px;
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+  .levels__description {
+    font-size: 1.7rem;
+    margin-bottom: -1rem; }
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -495,8 +535,7 @@ body {
   .profile-menu__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 20rem; }
+    justify-content: space-between; }
   .profile-menu__inbox {
     border-radius: 50%;
     width: 3.5rem;
@@ -558,10 +597,13 @@ body {
     transition: color .1s linear; }
     .profile-menu__text-done:hover {
       color: #4062BB; }
-  .profile-menu__coming {
-    padding-top: 1rem; }
   .profile-menu__progression {
-    padding-top: .7rem; }
+    text-decoration: none;
+    color: #f4f2f2;
+    padding-top: 2.1rem;
+    transition: color .1s linear; }
+    .profile-menu__progression:hover {
+      color: #4062BB; }
   .profile-menu__progression-icon {
     border-radius: 50%;
     width: 3.5rem;
@@ -569,8 +611,7 @@ body {
     margin-left: 1rem;
     padding: .5rem .6rem;
     background-image: linear-gradient(to right bottom, #e01c34, #de1440, #db104a, #d61055, #d1145e, #cb1966, #c51f6d, #be2573, #b52b7a, #ac317f, #a23684, #983b88);
-    padding: .6rem;
-    margin-top: 2rem; }
+    padding: .6rem; }
 
 .nav-functions {
   max-height: 58rem;

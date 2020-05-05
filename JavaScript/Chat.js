@@ -3,8 +3,8 @@ class Chat {
         const customCheckBox = document.querySelector('.chat-container__custom-checkbox');
         const customCheckDiv = document.querySelector('.chat-container__custom-checkbox-inner');
         const deleteButton = document.querySelector('.message-container__svg-delete');
-        const deleteCircle = document.querySelector('.message-container__circle-delete')
-        const chatContainer = document.querySelector('.chat-container')
+        const deleteCircle = document.querySelector('.message-container__circle-delete');
+        const chatContainer = document.querySelector('.chat-container');
 
         let flagCounter = 0;
 
@@ -19,21 +19,21 @@ class Chat {
             customCheckDiv.style.display = 'block'
             flagCounter++
 
+
             deleteButton.addEventListener('click', deleteMessege)
             deleteCircle.addEventListener('click', deleteMessege)
         }
 
-        const deleteMessege = () => {
+        const deleteMessege = () =>  {
 
             if(flagCounter && customCheckDiv.style.display === "block") {
                 chatContainer.remove();
                 console.log('1');
+         
             }
         }
 
         
-
-        
         customCheckBox.addEventListener('click', check)
-    }
+    }    
 }

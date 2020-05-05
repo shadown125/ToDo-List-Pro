@@ -7,9 +7,11 @@ class Mobile {
         const inbox = document.querySelector('.interface');
         const inboxText = document.querySelector('.profile-menu__text-inbox');
 
-        const todoContent = document.querySelector('.content')
+        const todoContent = document.querySelector('.content');
         const today = document.querySelector('.profile-menu__text-today');
-        const doneTodos = document.querySelector('.profile-menu__text-done')
+        const doneTodos = document.querySelector('.profile-menu__text-done');
+        const progressionButton = document.querySelector('.profile-menu__progression')
+        const progressionContent = document.querySelector('.progression-levels')
         let size = 600
         
         
@@ -33,7 +35,7 @@ class Mobile {
                 
             }
 
-            if (window.innerWidth > 1200) {
+            if (window.innerWidth > 1200 && progressionContent.style.display === "none" ) {
                 inbox.style.display = "block";
                 inbox.style.visibility = "visible";
                 todoContent.style.display = "block";
@@ -83,11 +85,21 @@ class Mobile {
             sidebar.style.left = "-60%"
 
             todoContent.style.display = "block";
-            todoContent.style.visibility = "visible";
-
-            
+            todoContent.style.visibility = "visible"; 
 
         }
+
+        if(progressionContent.style.display === 'block' || progressionContent.style.visibility === "visible") {
+            progressionContent.style.display = 'none';
+            progressionContent.style.visibility = "hidden";
+        }
+
+        todoContent.style.display = "block";
+        todoContent.style.visibility = "visible";
+
+        inbox.style.display = "block";
+        inbox.style.visibility = "visible";
+        
     }
 
         const doneTodoContent = () => {
@@ -103,6 +115,36 @@ class Mobile {
                 todoContent.style.display = "block";
                 todoContent.style.visibility = "visible";
             }
+
+            
+
+                if(progressionContent.style.display === 'block' || progressionContent.style.visibility === "visible") {
+                    progressionContent.style.display = 'none';
+                    progressionContent.style.visibility = "hidden";
+                }
+
+                doneTodos.style.display = "block";
+                doneTodos.style.visibility = "visible";
+                
+                todoContent.style.display = "block";
+                todoContent.style.visibility = "visible";
+
+                inbox.style.display = "block";
+                inbox.style.visibility = "visible";
+
+            
+        }
+
+        const progressionsSection = () => {
+            
+                inbox.style.display = 'none';
+                inbox.style.visibility = "hidden";
+                todoContent.style.display = 'none';
+                todoContent.style.visibility = "hidden"
+            
+            progressionContent.style.display = 'block';
+            progressionContent.style.visibility = "visible";
+
         }
     
 
@@ -113,7 +155,7 @@ class Mobile {
         buttonNav.addEventListener('click', showSidebar);
         doneTodos.addEventListener('click', hideSidebar);
         doneTodos.addEventListener('click', doneTodoContent);
-
+        progressionButton.addEventListener('click', progressionsSection);
         
     }
 
