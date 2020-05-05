@@ -3,8 +3,8 @@
     min-height: 85rem;
     background-color: $color-primary-1;
     padding: 2rem;
-    visibility: hidden;
-    display: none;
+    visibility: visible;
+    display: block;
 
     &__content {
         width: 100%;
@@ -48,4 +48,113 @@
         font-size: 1.7rem;
         margin-bottom: -1rem;
     }
+}
+
+.calendar {
+    width: 100%;
+    min-height: 36rem;
+    background-color: $color-dark-blue-1;
+    border-radius: 15px;
+    padding: 1rem;
+
+    &__levels {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+        color: $color-light-blue;
+        border: 1px solid $color-grey-light-3;
+        border-top: none;
+        background-color: $color-light-violet-3;
+    }
+
+    &__title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        color: $color-grey-light-3;
+        border-bottom: 1px solid $color-grey-light-3;
+    }
+
+    &__description {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        // margin-top: 1rem;
+        padding-top: 1rem;
+        border-bottom: 1px solid $color-grey-light-3;
+        border-left: 1px solid $color-grey-light-3;
+        border-right: 1px solid $color-grey-light-3;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        color: $color-grey-light-3;
+    }
+
+    &__week {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        // margin-top: 1rem;
+        padding-top: 1rem;
+        border-bottom: 1px solid $color-grey-light-3;
+        border-left: 1px solid $color-grey-light-3;
+        border-right: 1px solid $color-grey-light-3;
+    }
+
+    &__day {
+        font-size: 1.5rem;
+        color: $color-grey-light-3;
+    }
+
+    // MAIN CONTENT
+
+    &__content-wrapper {
+        width: 100%;
+    }
+
+    &__content-row {
+        width: 15rem;
+        height: 15rem;
+        border: 1px solid $color-grey-light-3;
+        width: 100%;
+        border-top: none;
+        display: flex;
+        border-left: none;
+    }
+
+    &__date-wrapper {
+        width: 15rem;
+        height: 15rem;
+        border-left: 1px solid $color-grey-light-3;
+        width: 100%;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+
+    }
+
+    &__text-content {
+        padding-left: .5rem;
+        font-size: 1.7rem;
+    }
+
+    &__numbers {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+
+.numbers-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 1.7rem;
+    margin-left: -.5rem;
+    color: $color-grey-light-3;
 }
