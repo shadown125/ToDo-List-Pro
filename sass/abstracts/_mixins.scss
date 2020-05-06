@@ -193,6 +193,20 @@
     @content;
 }
 
+@mixin progressionsLines {
+    height: 100%;
+    background-color: green;
+    border-radius: 15px;
+
+    @content;
+}
+
+@mixin progressionsPercent {
+    font-size: 1.7rem;
+    color: $color-grey-light-3;
+    padding-bottom: 1rem;
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone
