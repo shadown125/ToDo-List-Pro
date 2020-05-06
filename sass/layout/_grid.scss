@@ -93,7 +93,7 @@
     width: 50%;
     min-height: 90rem;
     padding: 3rem 0 6rem 3rem;
-    display: none !important;
+    // display: none !important;
 
     @include respond (tab-land) {
         order: 1;
@@ -113,7 +113,7 @@
     min-height: 60rem;
     width: 30%;
     padding: 3rem;
-    display: none !important;
+    // display: none !important;
 
     @include respond(tab-land) {
         visibility: hidden;
