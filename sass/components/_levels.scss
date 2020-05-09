@@ -37,7 +37,7 @@
 
     &__main-level {
         width: 90%;
-        height: 1rem;
+        height: 1.3rem;
         background-color: $color-grey-dark-2;
         border-radius: 15px;
         margin-top: 1rem;
@@ -66,6 +66,14 @@
         justify-content: flex-end;
         width: 90%;
         margin-top: -1rem;
+    }
+
+    &__exp {
+        display: flex;
+        justify-content: center;
+        margin-top: -1.65rem;
+        color: $color-grey-light-3;
+        font-size: 1.4rem;
     }
 
     &__percent-main {
@@ -209,6 +217,10 @@
         padding: .5rem;
         display: flex;
         flex-direction: column;
+        
+        &:hover {
+            cursor: pointer;
+        }
         // justify-content: center;
 
     }

@@ -12,7 +12,8 @@ class Mobile {
         const doneTodos = document.querySelector('.profile-menu__text-done');
         const progressionButton = document.querySelector('.profile-menu__progression')
         const progressionContent = document.querySelector('.progression-levels')
-        let size = 600
+        let sizeSmall = window.matchMedia('(max-width: 600px)');
+        let sizeBig = window.matchMedia('(max-width: 1200px)')
         
         
         
@@ -22,20 +23,20 @@ class Mobile {
             //     inbox.style.visibility = "hidden";
             // }
 
-            if(window.innerWidth > 600 && inbox.style.display === "block" && inbox.style.visibility === "visible" && todoContent.style.display === "none" || todoContent.style.visibility === "hidden") {
+            if(window.innerWidth > sizeSmall && inbox.style.display === "block" && inbox.style.visibility === "visible" && todoContent.style.display === "none" || todoContent.style.visibility === "hidden") {
 
                 todoContent.style.display = 'none';
                 todoContent.style.visibility = "hidden"
                 console.log('lol')
 
-            } else if (window.innerWidth > 600 && window.innerWidth < 1200 && inbox.style.display === "block" || inbox.style.visibility === "visible" && todoContent.style.display === "block" || todoContent.style.visibility === "visible") {
+            } else if (window.innerWidth > sizeSmall && window.innerWidth < sizeBig && inbox.style.display === "block" || inbox.style.visibility === "visible" && todoContent.style.display === "block" || todoContent.style.visibility === "visible") {
 
                 inbox.style.display = 'none';
                 inbox.style.visibility = "hidden";
                 
             }
 
-            if (window.innerWidth > 1200 && progressionContent.style.display === "none" ) {
+            if (window.innerWidth > sizeBig && progressionContent.style.display === "none" ) {
                 inbox.style.display = "block";
                 inbox.style.visibility = "visible";
                 todoContent.style.display = "block";
@@ -57,7 +58,7 @@ class Mobile {
 
         const inboxContent = () => {
 
-            if(window.innerWidth < 1200) {
+            if(window.innerWidth < sizeBig) {
 
             if(todoContent.style.display === "block" || todoContent.style.visibility === "visible" || true ) {
                 todoContent.style.display = 'none';
@@ -74,7 +75,7 @@ class Mobile {
 
         const todos = () => {
 
-            if(window.innerWidth < 1200) {
+            if(window.innerWidth < sizeBig) {
 
             if(inbox.style.display === "block" || inbox.style.visibility === "visible" ) {
                 inbox.style.display = 'none';
@@ -103,7 +104,7 @@ class Mobile {
     }
 
         const doneTodoContent = () => {
-            if(window.innerWidth < 1200) {
+            if(window.innerWidth < sizeBig) {
                 if(inbox.style.display === "block" || inbox.style.visibility === "visible" ) {
                     inbox.style.display = 'none';
                     inbox.style.visibility = "hidden";
