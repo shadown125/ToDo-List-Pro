@@ -1014,6 +1014,48 @@ body {
     font-size: 1.7rem;
     color: #f0eeee; }
 
+.name-change {
+  height: 30rem;
+  width: 100%;
+  display: none; }
+  .name-change__name {
+    display: flex;
+    margin-bottom: 3rem; }
+  .name-change__text {
+    font-size: 2rem;
+    color: #f0eeee;
+    width: 25%; }
+  .name-change__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: #f0eeee;
+    background-color: #454d66;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px; }
+    .name-change__input::placeholder {
+      color: #f0eeee; }
+    .name-change__input:focus {
+      outline: none;
+      background-color: #454d66; }
+    .name-change__input:focus::placeholder {
+      color: transparent; }
+  .name-change__button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem; }
+  .name-change__button-back {
+    width: 25%;
+    background-color: #009FFD;
+    color: #f4f2f2; }
+  .name-change__button-apply {
+    width: 25%;
+    background-color: #009FFD;
+    color: #f4f2f2; }
+
 .progression {
   background-color: #4C4177;
   width: 100%;

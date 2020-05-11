@@ -230,3 +230,65 @@
 
     }
 }
+
+.name-change {
+    height: 30rem;
+    width: 100%;
+    display: none;
+
+    &__name {
+        display: flex;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+        color: $color-grey-light-3;
+        width: 25%;
+    }
+
+    &__input {
+        width: 100%;
+        font-family: inherit;
+        font-size: 1.6rem;
+        color: $color-grey-light-3;
+        background-color: $color-dark-blue-1;
+        border:none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+
+        &::placeholder {
+            color: $color-grey-light-3;
+        }
+
+        &:focus {
+            outline: none;
+            background-color: $color-dark-blue-1;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+
+    &__button-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    &__button-back {
+        width: 25%;
+        background-color: #009FFD;
+        color: #f4f2f2;
+    }
+
+    &__button-apply {
+        width: 25%;
+        background-color: #009FFD;
+        color: #f4f2f2;
+    }
+
+}
