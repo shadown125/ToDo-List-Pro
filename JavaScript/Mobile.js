@@ -69,6 +69,11 @@ class Mobile {
             inbox.style.visibility = "visible";
             console.log('ssdsa')
 
+            if(progressionContent.style.display === 'block' && progressionContent.style.visibility === 'visible') {
+                progressionContent.style.display = 'none';
+                progressionContent.style.visibility = "hidden";
+            }
+
         }
     }
 
@@ -76,7 +81,7 @@ class Mobile {
 
             if(window.innerWidth < 1200) {
 
-            if(inbox.style.display === "block" || inbox.style.visibility === "visible" ) {
+            if(inbox.style.display == "block" || inbox.style.visibility == "visible" ) {
                 inbox.style.display = 'none';
                 inbox.style.visibility = "hidden";
                 console.log('lol')
@@ -96,9 +101,6 @@ class Mobile {
 
         todoContent.style.display = "block";
         todoContent.style.visibility = "visible";
-
-        inbox.style.display = "block";
-        inbox.style.visibility = "visible";
         
     }
 
@@ -129,8 +131,6 @@ class Mobile {
                 todoContent.style.display = "block";
                 todoContent.style.visibility = "visible";
 
-                inbox.style.display = "block";
-                inbox.style.visibility = "visible";
 
             
         }
@@ -156,6 +156,7 @@ class Mobile {
         doneTodos.addEventListener('click', hideSidebar);
         doneTodos.addEventListener('click', doneTodoContent);
         progressionButton.addEventListener('click', progressionsSection);
+        progressionButton.addEventListener('click', hideSidebar);
         
     }
 

@@ -15,7 +15,7 @@ html {
     font-size: 62.5%; // 1 rem = 10px
 
 
-    @include respond(big-desktop) {
+    @include respond(2k-desktopp) {
         font-size: 75%; //1rem = 12, 12/16
     }
 
