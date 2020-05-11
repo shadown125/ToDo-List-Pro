@@ -1,4 +1,4 @@
-class AddTodo {
+ class AddTodo {
     constructor() {
         let toDoList = [];
 

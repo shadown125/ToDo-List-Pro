@@ -94,6 +94,11 @@ class Mobile {
 
         }
 
+        if(window.innerWidth > 1200) {
+            inbox.style.display = "block";
+        inbox.style.visibility = "visible";
+        }
+
         if(progressionContent.style.display === 'block' || progressionContent.style.visibility === "visible") {
             progressionContent.style.display = 'none';
             progressionContent.style.visibility = "hidden";
@@ -118,7 +123,10 @@ class Mobile {
                 todoContent.style.visibility = "visible";
             }
 
-            
+            if(window.innerWidth > 1200) {
+                inbox.style.display = "block";
+            inbox.style.visibility = "visible";
+            }
 
                 if(progressionContent.style.display === 'block' || progressionContent.style.visibility === "visible") {
                     progressionContent.style.display = 'none';
