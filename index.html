@@ -723,18 +723,47 @@
                 <div class="name-change">
                     <div class="name-change__name">
                         <p class="name-change__text">Name</p>
-                        <input type="text" class="name-change__input" placeholder="Change here your name">
+                        <input type="text" class="name-change__input" id="name-input" placeholder="Change here your name">
                     </div>
 
-                    <div class="name-change__name">
-                        <p class="name-change__text">Surname</p>
-                        <input type="text" class="name-change__input" placeholder="Change here your surname">
+                    
+
+                    <div class="name-change__successful-container">
+                        <div class="name-change__svg-container">
+                            <svg class="main-content__svg-check name-change__svg ">
+                                <use xlink:href=img/sprite.svg#icon-check></use>
+                            </svg>
+                        </div>
+                        <p class="name-change__successful-text">Your changes were successful</p>
                     </div>
 
                     <div class="name-change__button-container">
                         <button class="message-container__send-button popup-task__button name-change__button-back">back</button>
                         <button class="message-container__send-button popup-task__button name-change__button-apply">Apply</button>
                     </div>
+                </div>
+
+                <div class="profession-change">
+
+                    <div class="name-change__name">
+                        <p class="name-change__text">Profession</p>
+                        <input type="text" class="name-change__input" id="surname-input" placeholder="Change here your Profession">
+                    </div>
+
+                    <div class="name-change__successful-container">
+                        <div class="name-change__svg-container">
+                            <svg class="main-content__svg-check name-change__svg ">
+                                <use xlink:href=img/sprite.svg#icon-check></use>
+                            </svg>
+                        </div>
+                        <p class="name-change__successful-text">Your changes were successful</p>
+                    </div>
+
+                    <div class="name-change__button-container">
+                        <button class="message-container__send-button popup-task__button name-change__button-back-pro">back</button>
+                        <button class="message-container__send-button popup-task__button name-change__button-apply-pro">Apply</button>
+                    </div>
+
                 </div>
 
                 <div class="popup-settings__options-list">
@@ -744,7 +773,11 @@
                     <p class="popup-settings__option popup-settings__option-profession">Change Profession</p>
                 </div>
                 <div class="popup-settings__options-list">
-                    <p class="popup-settings__option popup-settings__option-image">Add new profile image</p>
+                    <label for="image">
+                        <input type="file" name="image" id="image" style="display:none;"/>
+                        <p class="popup-settings__option popup-settings__option-image">Add new profile image</p>
+                     </label>
+                    
                 </div>
                 <div class="popup-settings__options-list">
                     <p class="popup-settings__option popup-settings__option-Language">Change Language</p>

@@ -1,34 +1,35 @@
 class Done {
     constructor() {
-        const doneTodosButton = document.querySelector('.profile-menu__text-done');
-        const doneContainer = document.querySelector('.done-todos');
-        const todoContentTitle = document.querySelector('.todos__title-wrapper')
-        const todoMainContent = document.querySelector('.main-content')
-        const today = document.querySelector('.profile-menu__text-today');
+        this.doneTodosButton = document.querySelector('.profile-menu__text-done');
+        this.doneContainer = document.querySelector('.done-todos');
+        this.todoContentTitle = document.querySelector('.todos__title-wrapper')
+        this.todoMainContent = document.querySelector('.main-content')
+        this.today = document.querySelector('.profile-menu__text-today');
 
-        const showDone = () => {
-            doneContainer.style.display = "block";
-            doneContainer.style.visibility = "visible";
-
-           todoContentTitle.style.display = 'none';
-           todoContentTitle.style.visibility = 'hidden';
-
-           todoMainContent.style.display = 'none';
-           todoMainContent.style.visibility = 'hidden';
-        }
-
-        const showTodo = () => {
-            doneContainer.style.display = "none";
-            doneContainer.style.visibility = "hidden";
-
-            todoContentTitle.style.display = 'flex';
-            todoContentTitle.style.visibility = 'visible';
-
-            todoMainContent.style.display = 'block';
-            todoMainContent.style.visibility = 'visible';
-        }
         
-        today.addEventListener('click', showTodo);
-        doneTodosButton.addEventListener('click', showDone);
+        this.today.addEventListener('click', this.showTodo.bind(this));
+        this.doneTodosButton.addEventListener('click', this.showDone.bind(this));
+    }
+
+    showDone() {
+        this.doneContainer.style.display = "block";
+        this.doneContainer.style.visibility = "visible";
+
+       this.todoContentTitle.style.display = 'none';
+       this.todoContentTitle.style.visibility = 'hidden';
+
+       this.todoMainContent.style.display = 'none';
+       this.todoMainContent.style.visibility = 'hidden';
+    }
+
+    showTodo() {
+        this.doneContainer.style.display = "none";
+        this.doneContainer.style.visibility = "hidden";
+
+        this.todoContentTitle.style.display = 'flex';
+        this.todoContentTitle.style.visibility = 'visible';
+
+        this.todoMainContent.style.display = 'block';
+        this.todoMainContent.style.visibility = 'visible';
     }
 }

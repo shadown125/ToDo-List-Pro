@@ -207,6 +207,39 @@
     padding-bottom: 1rem;
 }
 
+@mixin optionButtons {
+    width: 25%;
+    background-color: #009FFD;
+    color: #f4f2f2;
+
+    @content;
+}
+
+@mixin inputOptions {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: $color-grey-light-3;
+    background-color: $color-dark-blue-1;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+
+    @content;
+
+        &::placeholder {
+            color: $color-grey-light-3;
+        }
+
+        &:focus {
+            outline: none;
+            background-color: $color-dark-blue-1;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+}
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

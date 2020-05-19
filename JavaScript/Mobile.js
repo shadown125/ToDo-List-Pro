@@ -1,171 +1,198 @@
 class Mobile {
     constructor() {
-        const sidebar = document.querySelector('.sidebar');
-        const background = document.querySelector('.background-blur');
-        const buttonNav = document.querySelector('.menu__btn');
+        this.sidebar = document.querySelector('.sidebar');
+        this.background = document.querySelector('.background-blur');
+        this.buttonNav = document.querySelector('.menu__btn');
 
-        const inbox = document.querySelector('.interface');
-        const inboxText = document.querySelector('.profile-menu__text-inbox');
+        this.inbox = document.querySelector('.interface');
+        this.inboxText = document.querySelector('.profile-menu__text-inbox');
 
-        const todoContent = document.querySelector('.content');
-        const today = document.querySelector('.profile-menu__text-today');
-        const doneTodos = document.querySelector('.profile-menu__text-done');
-        const progressionButton = document.querySelector('.profile-menu__progression')
-        const progressionContent = document.querySelector('.progression-levels')
-        let size = 600
+        this.todoContent = document.querySelector('.content');
+        this.today = document.querySelector('.profile-menu__text-today');
+        this.doneTodos = document.querySelector('.profile-menu__text-done');
+        this.progressionButton = document.querySelector('.profile-menu__progression')
+        this.progressionContent = document.querySelector('.progression-levels')
+        this.size = 600
         
         
         
-        const preventBug = () => {
-            // if(size < window.innerWidth ) {
-            //     inbox.style.display = 'none';
-            //     inbox.style.visibility = "hidden";
-            // }
+        // const preventBug = () => {
+        //     // if(size < window.innerWidth ) {
+        //     //     inbox.style.display = 'none';
+        //     //     inbox.style.visibility = "hidden";
+        //     // }
 
-            if(window.innerWidth > 600 && inbox.style.display === "block" && inbox.style.visibility === "visible" && todoContent.style.display === "none" || todoContent.style.visibility === "hidden") {
-
-                todoContent.style.display = 'none';
-                todoContent.style.visibility = "hidden"
-                console.log('lol')
-
-            } else if (window.innerWidth > 600 && window.innerWidth < 1200 && inbox.style.display === "block" || inbox.style.visibility === "visible" && todoContent.style.display === "block" || todoContent.style.visibility === "visible") {
-
-                inbox.style.display = 'none';
-                inbox.style.visibility = "hidden";
-                
-            }
-
-            if (window.innerWidth > 1200 && progressionContent.style.display === "none" ) {
-                inbox.style.display = "block";
-                inbox.style.visibility = "visible";
-                todoContent.style.display = "block";
-                todoContent.style.visibility = "visible";
-            }
-        }
+            
+        // }
 
         
 
-        const showSidebar = () => {
-            sidebar.style.left = "0"
+        // const showSidebar = () => {
+           
 
+            
+        // }
+
+        // const hideSidebar = () => {
+           
+        // }
+
+    //     const inboxContent = () => {
+
+            
+    // }
+
+    //     const todos = () => {
+
+           
+        
+    // }
+
+        // const doneTodoContent = () => {
+            
+        // }
+
+        // const progressionsSection = () => {
+            
+   
+
+        // }
+    
+
+        window.addEventListener('resize', this.preventBug.bind(this))
+        this.today.addEventListener('click', this.todos.bind(this))
+        this.inboxText.addEventListener('click', this.inboxContent.bind(this))
+        this.background.addEventListener('click', this.hideSidebar.bind(this))
+        this.buttonNav.addEventListener('click', this.showSidebar.bind(this));
+        this.doneTodos.addEventListener('click', this.hideSidebar.bind(this));
+        this.doneTodos.addEventListener('click', this.doneTodoContent.bind(this));
+        this.progressionButton.addEventListener('click', this.progressionsSection.bind(this));
+        this.progressionButton.addEventListener('click', this.hideSidebar.bind(this));
+        
+    }
+
+    preventBug() {
+
+        if(window.innerWidth > 600 && this.inbox.style.display === "block" && this.inbox.style.visibility === "visible" && this.todoContent.style.display === "none" || this.todoContent.style.visibility === "hidden") {
+
+            this.todoContent.style.display = 'none';
+            this.todoContent.style.visibility = "hidden";
+
+        } else if (window.innerWidth > 600 && window.innerWidth < 1200 && this.inbox.style.display === "block" || this.inbox.style.visibility === "visible" && this.todoContent.style.display === "block" || this.todoContent.style.visibility === "visible") {
+
+            this.inbox.style.display = 'none';
+            this.inbox.style.visibility = "hidden";
             
         }
 
-        const hideSidebar = () => {
-            sidebar.style.left = "-60%"
+        if (window.innerWidth > 1200 && this.progressionContent.style.display === "none" ) {
+            this.inbox.style.display = "block";
+            this.inbox.style.visibility = "visible";
+            this.todoContent.style.display = "block";
+            this.todoContent.style.visibility = "visible";
         }
+    }
 
-        const inboxContent = () => {
+    showSidebar() {
+        this.sidebar.style.left = "0"
+    }
 
-            if(window.innerWidth < 1200) {
+    hideSidebar() {
+        this.sidebar.style.left = "-60%"
+    }
 
-            if(todoContent.style.display === "block" || todoContent.style.visibility === "visible" || true ) {
-                todoContent.style.display = 'none';
-                todoContent.style.visibility = "hidden"
+    inboxContent() {
+
+        if(window.innerWidth < 1200) {
+
+            if(this.todoContent.style.display === "block" || this.todoContent.style.visibility === "visible" || true ) {
+                this.todoContent.style.display = 'none';
+                this.todoContent.style.visibility = "hidden";
             }
 
-            sidebar.style.left = "-60%"
-            inbox.style.display = "block";
-            inbox.style.visibility = "visible";
-            console.log('ssdsa')
+            this.sidebar.style.left = "-60%";
+            this.inbox.style.display = "block";
+            this.inbox.style.visibility = "visible";
 
-            if(progressionContent.style.display === 'block' && progressionContent.style.visibility === 'visible') {
-                progressionContent.style.display = 'none';
-                progressionContent.style.visibility = "hidden";
+            if(this.progressionContent.style.display === 'block' && this.progressionContent.style.visibility === 'visible') {
+                this.progressionContent.style.display = 'none';
+                this.progressionContent.style.visibility = "hidden";
             }
 
         }
     }
 
-        const todos = () => {
+    todos() {
 
-            if(window.innerWidth < 1200) {
+        if(window.innerWidth < 1200) {
 
-            if(inbox.style.display == "block" || inbox.style.visibility == "visible" ) {
-                inbox.style.display = 'none';
-                inbox.style.visibility = "hidden";
+            if(this.inbox.style.display == "block" || this.inbox.style.visibility == "visible" ) {
+                this.inbox.style.display = 'none';
+                this.inbox.style.visibility = "hidden";
                 console.log('lol')
             }
 
-            sidebar.style.left = "-60%"
+            this.sidebar.style.left = "-60%"
 
-            todoContent.style.display = "block";
-            todoContent.style.visibility = "visible"; 
+            this.todoContent.style.display = "block";
+            this.todoContent.style.visibility = "visible"; 
 
         }
 
         if(window.innerWidth > 1200) {
-            inbox.style.display = "block";
-        inbox.style.visibility = "visible";
+            this.inbox.style.display = "block";
+            this.inbox.style.visibility = "visible";
         }
 
-        if(progressionContent.style.display === 'block' || progressionContent.style.visibility === "visible") {
-            progressionContent.style.display = 'none';
-            progressionContent.style.visibility = "hidden";
+        if(this.progressionContent.style.display === 'block' || this.progressionContent.style.visibility === "visible") {
+            this.progressionContent.style.display = 'none';
+            this.progressionContent.style.visibility = "hidden";
         }
 
-        todoContent.style.display = "block";
-        todoContent.style.visibility = "visible";
-        
+        this.todoContent.style.display = "block";
+        this.todoContent.style.visibility = "visible";
     }
 
-        const doneTodoContent = () => {
-            if(window.innerWidth < 1200) {
-                if(inbox.style.display === "block" || inbox.style.visibility === "visible" ) {
-                    inbox.style.display = 'none';
-                    inbox.style.visibility = "hidden";
-                }
+    doneTodoContent() {
 
-                doneTodos.style.display = "block";
-                doneTodos.style.visibility = "visible";
-                
-                todoContent.style.display = "block";
-                todoContent.style.visibility = "visible";
+        if(window.innerWidth < 1200) {
+            if(this.inbox.style.display === "block" || this.inbox.style.visibility === "visible" ) {
+                this.inbox.style.display = 'none';
+                this.inbox.style.visibility = "hidden";
             }
 
-            if(window.innerWidth > 1200) {
-                inbox.style.display = "block";
-            inbox.style.visibility = "visible";
+            this.doneTodos.style.display = "block";
+            this.doneTodos.style.visibility = "visible";
+            
+            this.todoContent.style.display = "block";
+            this.todoContent.style.visibility = "visible";
+        }
+
+        if(window.innerWidth > 1200) {
+            this.inbox.style.display = "block";
+        this.inbox.style.visibility = "visible";
+        }
+
+            if(this.progressionContent.style.display === 'block' || this.progressionContent.style.visibility === "visible") {
+                this.progressionContent.style.display = 'none';
+                this.progressionContent.style.visibility = "hidden";
             }
 
-                if(progressionContent.style.display === 'block' || progressionContent.style.visibility === "visible") {
-                    progressionContent.style.display = 'none';
-                    progressionContent.style.visibility = "hidden";
-                }
-
-                doneTodos.style.display = "block";
-                doneTodos.style.visibility = "visible";
-                
-                todoContent.style.display = "block";
-                todoContent.style.visibility = "visible";
-
-
+            this.doneTodos.style.display = "block";
+            this.doneTodos.style.visibility = "visible";
             
-        }
-
-        const progressionsSection = () => {
-            
-                inbox.style.display = 'none';
-                inbox.style.visibility = "hidden";
-                todoContent.style.display = 'none';
-                todoContent.style.visibility = "hidden"
-            
-            progressionContent.style.display = 'block';
-            progressionContent.style.visibility = "visible";
-
-        }
+            this.todoContent.style.display = "block";
+            this.todoContent.style.visibility = "visible";
+    }
     
-
-        window.addEventListener('resize', preventBug)
-        today.addEventListener('click', todos)
-        inboxText.addEventListener('click', inboxContent)
-        background.addEventListener('click', hideSidebar)
-        buttonNav.addEventListener('click', showSidebar);
-        doneTodos.addEventListener('click', hideSidebar);
-        doneTodos.addEventListener('click', doneTodoContent);
-        progressionButton.addEventListener('click', progressionsSection);
-        progressionButton.addEventListener('click', hideSidebar);
-        
+    progressionsSection() {
+        this.inbox.style.display = 'none';
+        this.inbox.style.visibility = "hidden";
+        this.todoContent.style.display = 'none';
+        this.todoContent.style.visibility = "hidden"
+    
+        this.progressionContent.style.display = 'block';
+        this.progressionContent.style.visibility = "visible";
     }
 
 }

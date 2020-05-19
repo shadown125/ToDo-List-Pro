@@ -229,10 +229,14 @@
         color: $color-grey-light-3;
 
     }
+
+    &__option-image {
+        cursor: pointer;
+    }
 }
 
 .name-change {
-    height: 30rem;
+    height: 20rem;
     width: 100%;
     display: none;
 
@@ -248,47 +252,61 @@
     }
 
     &__input {
-        width: 100%;
-        font-family: inherit;
-        font-size: 1.6rem;
-        color: $color-grey-light-3;
-        background-color: $color-dark-blue-1;
-        border:none;
-        padding: .7rem 2rem;
-        border-radius: 100px;
-
-        &::placeholder {
-            color: $color-grey-light-3;
-        }
-
-        &:focus {
-            outline: none;
-            background-color: $color-dark-blue-1;
-        }
-
-        &:focus::placeholder {
-            color: transparent;
-        }
+        @include inputOptions;
     }
 
     &__button-container {
         width: 100%;
+        height: 80%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 5rem;
+        margin-top: auto;
     }
 
+    // All buttons
+
     &__button-back {
-        width: 25%;
-        background-color: #009FFD;
-        color: #f4f2f2;
+        @include optionButtons;
     }
 
     &__button-apply {
-        width: 25%;
-        background-color: #009FFD;
-        color: #f4f2f2;
+        @include optionButtons;
     }
 
+    &__button-apply-pro {
+        @include optionButtons;
+    }
+
+    &__button-back-pro {
+        @include optionButtons;
+    }
+
+    &__successful-container {
+       display: flex;
+       visibility: hidden;
+       width: 100%; 
+       justify-content: center;
+       align-items: center;
+    }
+
+    &__successful-text {
+        font-size: 2rem;
+        color: $color-check-2;
+        margin-left: 1rem;
+    }
+
+}
+
+.profession-change {
+    height: 20rem;
+    width: 100%;
+    display: none;
+
+    &__input {
+        @include inputOptions {
+            width: 65%;
+            margin-left: 1.5rem;
+        }
+    }
 }

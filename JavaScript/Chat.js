@@ -1,39 +1,43 @@
 class Chat {
     constructor() {
-        const customCheckBox = document.querySelector('.chat-container__custom-checkbox');
-        const customCheckDiv = document.querySelector('.chat-container__custom-checkbox-inner');
-        const deleteButton = document.querySelector('.message-container__svg-delete');
-        const deleteCircle = document.querySelector('.message-container__circle-delete');
-        const chatContainer = document.querySelector('.chat-container');
+        this.customCheckBox = document.querySelector('.chat-container__custom-checkbox');
+        this.customCheckDiv = document.querySelector('.chat-container__custom-checkbox-inner');
+        this.deleteButton = document.querySelector('.message-container__svg-delete');
+        this.deleteCircle = document.querySelector('.message-container__circle-delete');
+        this.chatContainer = document.querySelector('.chat-container');
 
-        let flagCounter = 0;
+        this.flagCounter = 0;
 
-        const check = () => {
-
-            if(customCheckDiv.style.display === "block") {
-                customCheckDiv.style.display = 'none'
-                flagCounter--;
-                return
-            }
-
-            customCheckDiv.style.display = 'block'
-            flagCounter++
-
-
-            deleteButton.addEventListener('click', deleteMessege)
-            deleteCircle.addEventListener('click', deleteMessege)
-        }
-
-        const deleteMessege = () =>  {
-
-            if(flagCounter && customCheckDiv.style.display === "block") {
-                chatContainer.remove();
-                console.log('1');
-         
-            }
-        }
-
+        // this.customCheckBox.addEventListener('click', function() {
+        //     this.check();
+        // }) 
         
-        customCheckBox.addEventListener('click', check)
-    }    
+       this.customCheckBox.addEventListener('click', this.check.bind(this))
+        // this.customCheckBox.addEventListener('click', () => {
+        //     this.check();
+        // }) 
+    } 
+    
+    check() {
+        if(this.customCheckDiv.style.display === "block") {
+            this.customCheckDiv.style.display = 'none'
+            this.flagCounter--;
+            return
+        }
+
+        this.customCheckDiv.style.display = 'block'
+        this.flagCounter++
+
+
+        this.deleteButton.addEventListener('click', this.deleteMessege.bind(this))
+        this.deleteCircle.addEventListener('click', this.deleteMessege.bind(this))
+    }
+
+    deleteMessege(e) {
+        e.preventDefault();
+        if(this.flagCounter && this.customCheckDiv.style.display === "block") {
+            this.chatContainer.remove();
+     
+        }
+    }
 }

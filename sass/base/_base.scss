@@ -35,7 +35,7 @@ body {
     color: $color-grey-dark-2;
     background-image: linear-gradient($linear-gradient-bgc-1, $linear-gradient-bgc-2);
     
-    min-height: 100vh;
+    min-height: 95vh;
 
     @include respond(phone) {
         min-height: 0vh;

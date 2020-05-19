@@ -1,128 +1,120 @@
  class AddTodo {
     constructor() {
-        let toDoList = [];
+        this.toDoList = [];
 
-        const inputTitle = document.querySelector('.popup-task__title'); 
-        const inputDescription = document.querySelector('.popup-task__description');
-        // const todoContainer = document.querySelector('.todos');
-        const addTaskButton = document.querySelector('.popup-task__button');
-        const ulListTodo = document.querySelector('.main-content__list-items');
-        const popup = document.querySelector('.popup-task');
-        const listItems = document.getElementsByClassName('main-content__item');
-        const mustDo = document.querySelector('.progression__must-do-task-counter');
-        const doneTasks = document.querySelector('.progression__done-counter');
+        this.inputTitle = document.querySelector('.popup-task__title'); 
+        this.inputDescription = document.querySelector('.popup-task__description');
+        this.addTaskButton = document.querySelector('.popup-task__button');
+        this.ulListTodo = document.querySelector('.main-content__list-items');
+        this.popup = document.querySelector('.popup-task');
+        this.listItems = document.getElementsByClassName('main-content__item');
+        this.mustDo = document.querySelector('.progression__must-do-task-counter');
+        this.doneTasks = document.querySelector('.progression__done-counter');
 
-        const doneTodosUl = document.querySelector('.done-todos__item-list');
-        const searchInput = document.querySelector('.search__input');
+        this.doneTodosUl = document.querySelector('.done-todos__item-list');
+        this.searchInput = document.querySelector('.search__input');
 
-        let index;
-        let counter = 0;
+        this.index;
+        this.counter = 0;
 
-        const removeTask = (e) => {
-           // e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();
-            index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
-            if (index) {
-                toDoList.splice(index, 1);
-            // console.log(toDoList)
-            console.log(index)
-            mustDo.textContent = toDoList.length;
-            
-            renderList();
-            } else {
-                index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+  
+        this.addTaskButton.addEventListener('click', this.addTask.bind(this));
+        this.searchInput.addEventListener('input', this.searchTask.bind(this));
+    }
 
-                toDoList.splice(index, 1);
-            // console.log(toDoList)
-            // console.log(index)
-            mustDo.textContent = toDoList.length;
-            
-            console.log(toDoList)
-            renderList();
-            }
-            
+
+    removeTask(e) {
+        
+        this.index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+        if (this.index) {
+            this.toDoList.splice(this.index, 1);
+        this.mustDo.textContent = this.toDoList.length;
+        
+        this.renderList();
+        } else {
+        this.index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+
+        this.toDoList.splice(this.index, 1);
+        this.mustDo.textContent = this.toDoList.length;
+        
+        this.renderList();
         }
 
-        const completeTask = (e) => {
-           
+    }
+
+    completeTask(e) {
+  
             //Adding
-            counter++;
+            this.counter++;
 
 
-            index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+            this.index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
             
-            if (index) {
+            if (this.index) {
                 e.target.parentNode.parentNode.parentNode.parentNode.remove();
 
-                doneTodosUl.appendChild(toDoList[index]);
-                toDoList.splice(index, 1);
-                // console.log(toDoList)
-                // console.log(index)
-                mustDo.textContent = toDoList.length;
+                this.doneTodosUl.appendChild(this.toDoList[this.index]);
+                this.toDoList.splice(this.index, 1);
+                this.mustDo.textContent = this.toDoList.length;
             
-            renderList();
+            this.renderList();
             } else {
-                index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
+                this.index = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.key;
 
                 e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();
-                doneTodosUl.appendChild(toDoList[index]);
+                this.doneTodosUl.appendChild(this.toDoList[this.index]);
 
-                toDoList.splice(index, 1);
-            // console.log(toDoList)
+                this.toDoList.splice(this.index, 1);
                 
-                mustDo.textContent = toDoList.length;
-                renderList();
+                this.mustDo.textContent = this.toDoList.length;
+                this.renderList();
             }
-            // console.log(toDoList)
-            doneTasks.textContent = counter.toString();
-        }
+            this.doneTasks.textContent = this.counter.toString();
+    }
 
-        const addTask = (e) => {
-            e.preventDefault();
-            let titleText = inputTitle.value;
-            let descriptionText = inputDescription.value;
-            if(titleText == '') return;
-            const task = document.createElement('li');
-            task.className = 'main-content__item';
-            task.innerHTML = "<div class=main-content__header>" + "<div class=main-content__circle></div>" + "<div class=main-content__header-wrapper>" + "<div class=main-content__title-wrapper>" + "<p class=main-content__title>" + titleText + "</p></div>" + "<div class=main-content__svg-wrapper>" + "<div class=main-content__svg-circle-check>" + "<button class=btn-svg>" + "<a href=#><svg class=main-content__svg-check>" + "<use xlink:href=img/sprite.svg#icon-check></use>" + "</svg></a></button></div>" + "<div class=main-content__svg-circle-message>" + "<button class=btn-svg>" + "<svg class=main-content__svg-message>" + "<use xlink:href=img/sprite.svg#icon-bubble></use>" + "</svg></button></div>" + "<div class=main-content__svg-circle-attachment>" + "<button class=btn-svg>" + "<a href=#><svg class=main-content__svg-attachment>" + "<use xlink:href=img/sprite.svg#icon-cross></use>" + "</svg></a></button></div></div></div></div>" + "<div class=main-content__text-container>" + "<p class=main-content__text>" + descriptionText + "</p></div>";
+    addTask(e) {
+        e.preventDefault();
+        let titleText = this.inputTitle.value;
+        let descriptionText = this.inputDescription.value;
+        if(titleText == '') return;
+        const task = document.createElement('li');
+        task.className = 'main-content__item';
+        task.innerHTML = "<div class=main-content__header>" + "<div class=main-content__circle></div>" + "<div class=main-content__header-wrapper>" + "<div class=main-content__title-wrapper>" + "<p class=main-content__title>" + titleText + "</p></div>" + "<div class=main-content__svg-wrapper>" + "<div class=main-content__svg-circle-check>" + "<button class=btn-svg>" + "<a href=#><svg class=main-content__svg-check>" + "<use xlink:href=img/sprite.svg#icon-check></use>" + "</svg></a></button></div>" + "<div class=main-content__svg-circle-message>" + "<button class=btn-svg>" + "<svg class=main-content__svg-message>" + "<use xlink:href=img/sprite.svg#icon-bubble></use>" + "</svg></button></div>" + "<div class=main-content__svg-circle-attachment>" + "<button class=btn-svg>" + "<a href=#><svg class=main-content__svg-attachment>" + "<use xlink:href=img/sprite.svg#icon-cross></use>" + "</svg></a></button></div></div></div></div>" + "<div class=main-content__text-container>" + "<p class=main-content__text>" + descriptionText + "</p></div>";
 
-            toDoList.push(task);
-            renderList()
+        this.toDoList.push(task);
+        this.renderList()
 
-            // ulListTodo.appendChild(task);
-            inputDescription.value = '';
-            inputTitle.value = '';
-            mustDo.textContent = toDoList.length;
-            window.location.replace('#')
+        // ulListTodo.appendChild(task);
+        this.inputDescription.value = '';
+        this.inputTitle.value = '';
+        this.mustDo.textContent = this.toDoList.length;
+        window.location.replace('#')
 
-            task.querySelector('.main-content__svg-attachment').addEventListener('click', removeTask);
-            task.querySelector('.main-content__svg-check').addEventListener('click', completeTask);
-        }
+        task.querySelector('.main-content__svg-attachment').addEventListener('click', this.removeTask.bind(this));
+        task.querySelector('.main-content__svg-check').addEventListener('click', this.completeTask.bind(this));
+    }
+
+    renderList() {
+        this.ulListTodo.textContent = '';
+        this.toDoList.forEach((toDoElement, key) => {
+            toDoElement.dataset.key = key;
+            this.ulListTodo.appendChild(toDoElement);
+        })
+    }
+
+    //SEARCHING ITEMS
 
 
-        const renderList = () => {
-             ulListTodo.textContent = '';
-            toDoList.forEach((toDoElement, key) => {
-                toDoElement.dataset.key = key;
-                ulListTodo.appendChild(toDoElement);
-            })
-        }
-        addTaskButton.addEventListener('click', addTask);
-
-        //SEARCHING ITEMS
-
-        const searchTask = (e) => {
-            e.preventDefault();
-            const searchText = e.target.value.toLowerCase().trim();
-            ulListTodo.textContent = "";
-            let filtrList = toDoList.filter((filtrLi) => {
-                return filtrLi.textContent.toLowerCase().includes(searchText);
-            })
-            filtrList.forEach(filtrLi => {
-                ulListTodo.appendChild(filtrLi);
-            })
-        }
-
-        searchInput.addEventListener('input', searchTask);
+    searchTask() {
+        e.preventDefault();
+        const searchText = e.target.value.toLowerCase().trim();
+        this.ulListTodo.textContent = "";
+        let filtrList = this.toDoList.filter((filtrLi) => {
+            return filtrLi.textContent.toLowerCase().includes(searchText);
+        })
+        filtrList.forEach(filtrLi => {
+            this.ulListTodo.appendChild(filtrLi);
+        })
     }
 
 }

@@ -40,7 +40,7 @@ body {
   line-height: 1.7;
   color: #777;
   background-image: linear-gradient(#667eea, #764ba2);
-  min-height: 100vh; }
+  min-height: 95vh; }
   @media only screen and (max-width: 37em) {
     body {
       min-height: 0vh; } }
@@ -1013,9 +1013,11 @@ body {
   .popup-settings__option {
     font-size: 1.7rem;
     color: #f0eeee; }
+  .popup-settings__option-image {
+    cursor: pointer; }
 
 .name-change {
-  height: 30rem;
+  height: 20rem;
   width: 100%;
   display: none; }
   .name-change__name {
@@ -1043,10 +1045,11 @@ body {
       color: transparent; }
   .name-change__button-container {
     width: 100%;
+    height: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5rem; }
+    margin-top: auto; }
   .name-change__button-back {
     width: 25%;
     background-color: #009FFD;
@@ -1055,6 +1058,47 @@ body {
     width: 25%;
     background-color: #009FFD;
     color: #f4f2f2; }
+  .name-change__button-apply-pro {
+    width: 25%;
+    background-color: #009FFD;
+    color: #f4f2f2; }
+  .name-change__button-back-pro {
+    width: 25%;
+    background-color: #009FFD;
+    color: #f4f2f2; }
+  .name-change__successful-container {
+    display: flex;
+    visibility: hidden;
+    width: 100%;
+    justify-content: center;
+    align-items: center; }
+  .name-change__successful-text {
+    font-size: 2rem;
+    color: #26F596;
+    margin-left: 1rem; }
+
+.profession-change {
+  height: 20rem;
+  width: 100%;
+  display: none; }
+  .profession-change__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: #f0eeee;
+    background-color: #454d66;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 65%;
+    margin-left: 1.5rem; }
+    .profession-change__input::placeholder {
+      color: #f0eeee; }
+    .profession-change__input:focus {
+      outline: none;
+      background-color: #454d66; }
+    .profession-change__input:focus::placeholder {
+      color: transparent; }
 
 .progression {
   background-color: #4C4177;
