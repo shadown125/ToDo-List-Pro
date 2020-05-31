@@ -60,3 +60,133 @@
 .background-ahref {
     cursor: inherit;
 }
+
+// THEMES
+
+.main-header {
+    background-image:  $header-main;
+}
+
+.main-container {
+    background-image:  $container-main;
+}
+
+.main-sidebar {
+    background-image:  $sidebar-main !important;
+}
+
+.main-progress {
+    background-image:  $progressContent-main;
+}
+
+.main-todo {
+    background-image: $todo-main;
+}
+
+.main-interface {
+    background-image: $interfaceContainer-main;
+}
+
+// VIOLET
+
+.violet-header {
+    background-image:  $header-violet;
+}
+
+.violet-container {
+    background-image:  $container-violet;
+}
+
+.violet-sidebar {
+    background-image:  $sidebar-violet !important;
+}
+
+.violet-progress {
+    background-image:  $progressContent-violet;
+}
+
+.violet-todo {
+    background-image: $todo-violet;
+}
+
+.violet-interface {
+    background-image: $interfaceContainer-violet;
+}
+
+// GREEN 
+
+.green-header {
+    background-image:  $header-green;
+}
+
+.green-container {
+    background-image:  $container-green;
+}
+
+.green-sidebar {
+    background-image:  $sidebar-green !important;
+}
+
+.green-progress {
+    background-image:  $progressContent-green;
+}
+
+.green-todo {
+    background-image: $todo-green;
+}
+
+.green-interface {
+    background-image: $interfaceContainer-green;
+}
+
+// ORANGE
+
+.orange-header {
+    background-image:  $header-orange ;
+}
+
+.orange-container {
+    background-image:  $container-orange;
+}
+
+.orange-sidebar {
+    background-image:  $sidebar-orange !important;
+}
+
+.orange-progress {
+    background-image:  $progressContent-orange;
+}
+
+.orange-todo {
+    background-image: $todo-orange;
+}
+
+.orange-interface {
+    background-image: $interfaceContainer-orange;
+}
+
+// BLUE
+
+.blue-header {
+    background-image:  $header-blue;
+}
+
+.blue-container {
+    background-image:  $container-blue;
+}
+
+.blue-sidebar {
+    background-image:  $sidebar-blue !important;
+}
+
+.blue-progress {
+    background-image:  $progressContent-blue;
+}
+
+.blue-todo {
+    background-image: $todo-blue;
+}
+
+.blue-interface {
+    background-image: $interfaceContainer-blue;
+}
