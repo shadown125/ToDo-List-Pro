@@ -248,6 +248,40 @@ body {
   flex-direction: column;
   justify-content: space-between; }
 
+.interface {
+  position: relative; }
+  .interface__block {
+    background-color: #000;
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    width: 90%;
+    height: 95%;
+    z-index: 10;
+    opacity: .3;
+    border-radius: 15px; }
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      .interface__block {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3); } }
+  .interface__block-svg-container {
+    position: absolute;
+    flex-direction: column;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -3rem;
+    margin-top: -6rem; }
+  .interface__block-svg {
+    fill: grey; }
+  .interface__block-text {
+    font-size: 2rem;
+    color: white; }
+
 .inbox-container {
   display: flex;
   background-color: #F3917B;
@@ -763,7 +797,59 @@ body {
 .profile-menu {
   width: 100%;
   padding: 1rem;
-  display: flex; }
+  display: flex;
+  position: relative; }
+  .profile-menu__block-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: #000;
+    border-radius: 15px; }
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      .profile-menu__block-container {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3); } }
+  .profile-menu__block-svg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    justify-content: space-around;
+    align-items: center; }
+  .profile-menu__block-svg {
+    height: 3rem;
+    width: 3rem;
+    margin-left: -6.3rem;
+    fill: #EE8E6B; }
+    @media only screen and (min-width: 132.5em) {
+      .profile-menu__block-svg {
+        margin-left: -6.9rem; } }
+    @media only screen and (max-width: 106.25em) {
+      .profile-menu__block-svg {
+        margin-left: -3.5rem; } }
+    @media only screen and (max-width: 75em) {
+      .profile-menu__block-svg {
+        margin-left: -5.5rem; } }
+    @media only screen and (max-width: 65.62em) {
+      .profile-menu__block-svg {
+        margin-left: -3.5rem; } }
+  .profile-menu__block-text {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-left: -10rem; }
+  .profile-menu__block-container-progress {
+    top: 73%; }
+  .profile-menu__block-svg-container-progress {
+    top: 73%; }
+  .profile-menu__block-svg-progress {
+    fill: #db104a; }
+  .profile-menu__block-text-progress {
+    margin-top: .3rem; }
   .profile-menu__wrapper {
     display: flex;
     flex-direction: column;
@@ -1663,6 +1749,27 @@ body {
     .icons {
       visibility: hidden;
       display: none; } }
+  .icons__block-container {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 6;
+    margin-top: -.3rem; }
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      .icons__block-container {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3); } }
+  .icons__block-svg-container {
+    position: absolute;
+    z-index: 7;
+    margin-top: .5rem; }
+  .icons__block-svg {
+    width: 3rem;
+    height: 3rem;
+    fill: #EE8E6B; }
   .icons__list {
     list-style-type: none;
     display: flex;

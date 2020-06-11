@@ -4,15 +4,17 @@
   "description": "Making functionality to app",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --config ./config/webpack.config.js",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    
+    "start:sass": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "prod": "webpack --config ./config/webpack.config.prod.js",
+    "dev": "webpack --config ./config/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -24,15 +26,34 @@
     "url": "https://github.com/shadown125/ToDo-List-Pro/issues"
   },
   "homepage": "https://github.com/shadown125/ToDo-List-Pro#readme",
+  "browserslist": "> 0.3%, not IE 11",
   "devDependencies": {
-    "node-sass": "^4.14.0",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
     "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "concat": "^1.0.3",
-    
+    "copy-webpack-plugin": "^6.0.2",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.0"
+    "postcss-cli": "^7.1.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "svg-url-loader": "^6.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "jquery": "^3.5.1",
     "live-server": "^1.2.1"
   }
 }

@@ -6,6 +6,8 @@
     margin-bottom: 3rem;
     display: flex;
 
+    @include progressContent-colors;
+
     &__date-wrapper {
         width: 15%;
         height: 100%;

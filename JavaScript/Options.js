@@ -1,4 +1,4 @@
-class Options {
+export default class Options {
     constructor() {
         this.messegesContainer = document.querySelector('.icons__messeges-wrapper ');
         this.messegesIcon = document.querySelector('.icons__single-item-2');
@@ -40,7 +40,7 @@ class Options {
 
 
         this.messegesContainer.addEventListener('click', this.preventBug.bind(this));
-        this.messegesIcon.addEventListener('click', this.showMesseges.bind(this))
+        // this.messegesIcon.addEventListener('click', this.showMesseges.bind(this))  BLOCKED
         this.body.addEventListener('click', this.hidePopup.bind(this));
         this.nameButton.addEventListener('click', this.showChangeName.bind(this));
         this.nameButton.addEventListener('click', this.hideOptions.bind(this));
@@ -60,17 +60,19 @@ class Options {
         
     }
 
-    showMesseges() {
-        this.flag = 0;
+    // BLOCKED
 
-        if(this.messegesContainer.style.display === "block") {
-            this.messegesContainer.style.display = 'none'
-            return;
-        }
+    // showMesseges() {
+    //     this.flag = 0;
+
+    //     if(this.messegesContainer.style.display === "block") {
+    //         this.messegesContainer.style.display = 'none'
+    //         return;
+    //     }
        
-        this.messegesContainer.style.display = 'block'
-        this.flag++
-    }
+    //     this.messegesContainer.style.display = 'block'
+    //     this.flag++
+    // }
 
     preventBug() {
         this.flag--;

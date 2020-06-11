@@ -1,4 +1,4 @@
-class SidebarNav {
+export default class SidebarNav {
     constructor() {
         this.buttonProject = document.querySelector('.project-container__svg-button');
         this.buttonLabels = document.querySelector('.labels-container__svg-button');

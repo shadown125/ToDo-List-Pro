@@ -1,4 +1,5 @@
-class Progress {
+import $ from 'jquery';
+export default class Progress {
     constructor() {
         this.$dateNumber = $('.progression__day');
         this.$monthDate = $('.progression__month');
