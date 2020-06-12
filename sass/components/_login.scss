@@ -1,0 +1,187 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    @include bgcBlurr;
+}
+
+.login-container {
+    width: 50%;
+    height: 60%;
+    background-image: url('../img/img-6.jpg');
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &__wrapper {
+        height: 80%;
+        width: 45%;
+        background-color: white;
+        border-radius: 15px;
+    }
+
+    &__title-wrapper {
+        display: flex;
+        width: 100%;
+        height: 8rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    &__login-title {
+        font-size: 3rem;
+    }
+
+    &__register-button {
+        margin-left: -2rem;
+        position: relative;
+        background: transparent;
+
+
+        @include button-animated {
+
+            &:hover {
+
+                &::after {
+                    transform: scaleX(1.1) scaleY(1.3);
+                }
+            }
+
+            &,
+            &:link,
+            &:visited {
+                text-transform: none;
+                font-size: 2.5rem;
+                font-family: inherit;
+            }
+            &::after {
+                background-color: $color-title;
+            }
+        };
+    }
+
+    //FORM
+
+    &__login-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 50%;
+    }
+
+    &__form {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__label-login {
+        @include label-adjustments;
+    }
+
+    &__input-login {
+        width: 100%;
+        @include input {
+            background-color: $color-grey-dark-2;
+        };
+    }
+
+    &__label-password {
+        @include label-adjustments;
+    }
+
+    &__input-password {
+        width: 100%;
+
+        @include input {
+            background-color: $color-grey-dark-2;
+        };
+    }
+
+    &__submit-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 5rem;
+        margin-top: 1rem;
+    }
+
+    &__forgotten-password {
+        font-size: 1.6rem;
+    }
+
+    &__login-button {
+        font-size: 2rem;
+        background-color: #009FFD;
+        position: relative;
+        width: 40%;
+        margin-right: -3.5rem;
+
+        @include button-animated;
+    }
+
+    // ADDITIONAL LOGIN OPTIONS
+
+    &__additional-login-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 1rem;
+    }
+
+    &__additional-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__login-guest-button {
+        width: 80%;
+        height: 4rem;
+        position: relative;
+        
+        @include button-animated {
+
+            &:hover {
+
+                &::after {
+                    transform: scaleX(1.1) scaleY(1.3);
+                }
+            }
+
+            &,
+            &:link,
+            &:visited {
+                text-transform: none;
+            }
+
+            &::after {
+                background-color: $color-mail-2;
+            }
+        };
+    }
+}
+
+.g-signin2 {
+    margin-top: 1rem;
+    width: 80% !important;
+}
+.abcRioButton {
+    width: 100% !important;
+}

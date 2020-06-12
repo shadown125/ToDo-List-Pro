@@ -1,5 +1,7 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -25,8 +27,7 @@ module.exports = {
         // contentBase: path.resolve(__dirname, '../', 'img')
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             },
@@ -53,8 +54,11 @@ module.exports = {
                 exclude: /node_modules/,
                 options: {
                     presets: [
-                        ["@babel/preset-env", { useBuiltIns: 'usage', corejs: "2.0.0" }]
-                        ],
+                        ["@babel/preset-env", {
+                            useBuiltIns: 'usage',
+                            corejs: "2.0.0"
+                        }]
+                    ],
                     plugins: [
                         "@babel/plugin-proposal-class-properties"
                     ]

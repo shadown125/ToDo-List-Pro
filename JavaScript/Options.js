@@ -12,7 +12,7 @@ export default class Options {
         this.languageButton = document.querySelector('.popup-settings__option-Language')
         this.deleteButton = document.querySelector('.popup-settings__option-delete')
         this.logOutButton = document.querySelector('.popup-settings__option-log-out')
-        
+
         // Changing options
         this.nameContainer = document.querySelector('.name-change');
         this.professionContainer = document.querySelector('.profession-change');
@@ -56,8 +56,8 @@ export default class Options {
 
         this.buttonApply.addEventListener('click', this.changeName.bind(this))
         this.buttonApplyPro.addEventListener('click', this.changeSurName.bind(this))
-        
-        
+
+
     }
 
     // BLOCKED
@@ -69,7 +69,7 @@ export default class Options {
     //         this.messegesContainer.style.display = 'none'
     //         return;
     //     }
-       
+
     //     this.messegesContainer.style.display = 'block'
     //     this.flag++
     // }
@@ -81,7 +81,7 @@ export default class Options {
     hidePopup() {
         this.flag++;
 
-        if(this.messegesContainer.style.display === "block" && this.flag === 3) {
+        if (this.messegesContainer.style.display === "block" && this.flag === 3) {
             this.messegesContainer.style.display = 'none';
             this.flag = 0;
             return;
@@ -89,22 +89,22 @@ export default class Options {
     }
 
     hideOptions() {
-        for (let i=0; i< this.optionList.length; i++) {
+        for (let i = 0; i < this.optionList.length; i++) {
             this.optionList[i].style.display = 'none';
         }
     }
 
-    showChangeName () {
+    showChangeName() {
         this.nameContainer.style.display = 'block';
     }
 
     backToOptions() {
-        for (let i=0; i< this.optionList.length; i++) {
+        for (let i = 0; i < this.optionList.length; i++) {
             this.optionList[i].style.display = 'block';
         }
         this.professionContainer.style.display = 'none';
         this.nameContainer.style.display = 'none';
-        for (let i = 0; i< this.successContainer.length; i++) {
+        for (let i = 0; i < this.successContainer.length; i++) {
             this.successContainer[i].style.visibility = 'hidden'
         }
     }
@@ -114,27 +114,27 @@ export default class Options {
     }
 
     changeName() {
-        if(this.inputName.value == '') return
-           
-        for (let i = 0; i< this.profileName.length; i++) {
+        if (this.inputName.value == '') return
+
+        for (let i = 0; i < this.profileName.length; i++) {
             this.profileName[i].textContent = '';
             this.profileName[i].textContent = this.inputName.value;
         }
         this.inputName.value = '';
-        for (let i = 0; i< this.successContainer.length; i++) {
+        for (let i = 0; i < this.successContainer.length; i++) {
             this.successContainer[i].style.visibility = 'visible'
         }
     }
 
     changeSurName() {
-        if(this.inputSurName.value == '') return
+        if (this.inputSurName.value == '') return
 
-        for (let i = 0; i< this.profileProfession.length; i++) {
+        for (let i = 0; i < this.profileProfession.length; i++) {
             this.profileProfession[i].textContent = '';
             this.profileProfession[i].textContent = this.inputSurName.value;
         }
         this.inputSurName.value = '';
-        for (let i = 0; i< this.successContainer.length; i++) {
+        for (let i = 0; i < this.successContainer.length; i++) {
             this.successContainer[i].style.visibility = 'visible'
         }
     }

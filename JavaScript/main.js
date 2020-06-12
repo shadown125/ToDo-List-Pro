@@ -1,4 +1,3 @@
-
 const addTodo = new AddTodo();
 const chatContainer = new Chat();
 const ChangeColors = new Colors();

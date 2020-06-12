@@ -11,15 +11,15 @@ export default class Chat {
         // this.customCheckBox.addEventListener('click', function() {
         //     this.check();
         // }) 
-        
-       this.customCheckBox.addEventListener('click', this.check.bind(this))
+
+        this.customCheckBox.addEventListener('click', this.check.bind(this))
         // this.customCheckBox.addEventListener('click', () => {
         //     this.check();
         // }) 
-    } 
-    
+    }
+
     check() {
-        if(this.customCheckDiv.style.display === "block") {
+        if (this.customCheckDiv.style.display === "block") {
             this.customCheckDiv.style.display = 'none'
             this.flagCounter--;
             return
@@ -35,9 +35,9 @@ export default class Chat {
 
     deleteMessege(e) {
         e.preventDefault();
-        if(this.flagCounter && this.customCheckDiv.style.display === "block") {
+        if (this.flagCounter && this.customCheckDiv.style.display === "block") {
             this.chatContainer.remove();
-     
+
         }
     }
 }

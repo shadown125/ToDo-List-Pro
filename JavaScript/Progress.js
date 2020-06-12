@@ -6,17 +6,17 @@ export default class Progress {
         this.$progressLine = $('.progression__bar');
         this.$doneTodoCounter = $('.progression__done-counter')
         this.$mustDoCounter = $('.progression__must-do-task-counter')
-        
+
 
 
         // DATE
-        
+
         this.months();
 
         // PROGRESSION LINE
 
         this.progressLineContent();
-   
+
     }
 
     months() {
@@ -24,10 +24,10 @@ export default class Progress {
 
             const nowTime = new Date().getDate();
             const nowMonth = new Date().getMonth();
-    
+
             this.$dateNumber.text(nowTime);
-    
-            if(nowMonth === 0) {
+
+            if (nowMonth === 0) {
                 this.$monthDate.text('JAN')
             } else if (nowMonth === 1) {
                 this.$monthDate.text('FEB')
@@ -52,8 +52,8 @@ export default class Progress {
             } else if (nowMonth === 11) {
                 this.$monthDate.text('DEC')
             }
-    
-            }, 100)
+
+        }, 100)
     }
 
     progressLineContent() {
@@ -65,7 +65,7 @@ export default class Progress {
 
             const total = Number(mustDoNumber) + Number(doneTodoNumber);
             let percent = doneTodoNumber * 100 / total;
-        
+
             this.$progressLine.css('width', `${percent}%`)
         }, 500)
     }

@@ -6,7 +6,7 @@ export default class Done {
         this.todoMainContent = document.querySelector('.main-content')
         this.today = document.querySelector('.profile-menu__text-today');
 
-        
+
         this.today.addEventListener('click', this.showTodo.bind(this));
         this.doneTodosButton.addEventListener('click', this.showDone.bind(this));
     }
@@ -15,11 +15,11 @@ export default class Done {
         this.doneContainer.style.display = "block";
         this.doneContainer.style.visibility = "visible";
 
-       this.todoContentTitle.style.display = 'none';
-       this.todoContentTitle.style.visibility = 'hidden';
+        this.todoContentTitle.style.display = 'none';
+        this.todoContentTitle.style.visibility = 'hidden';
 
-       this.todoMainContent.style.display = 'none';
-       this.todoMainContent.style.visibility = 'hidden';
+        this.todoMainContent.style.display = 'none';
+        this.todoMainContent.style.visibility = 'hidden';
     }
 
     showTodo() {

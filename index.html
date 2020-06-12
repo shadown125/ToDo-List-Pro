@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="img/favicon.ico" rel="icon" type="image/x-icon" /> <!--Author "Larissa"-->
-    <link href="build/css/main-443fd151dc7e8af2a56e.css" rel="stylesheet">
+    <link href="build/css/main-3e301b7d5a2011099e2a.css" rel="stylesheet">
     <title>ToDo App</title>
 </head>
 <body id="body">
@@ -836,6 +841,35 @@
     <a href="#" class="background-ahref">
         <div class="background-blur" id="background-blur"></div>
     </a>
+
+    <section class="login">
+        <div class="login-container">
+            <div class="login-container__wrapper">
+                <div class="login-container__title-wrapper">
+                    <p class="login-container__login-title">Login or</p>
+                    <button class="login-container__register-button">Register</button>
+                </div>
+                <div class="login-container__login-form-wrapper">
+                    <form action="#" class="login-container__form">
+                        <label for="login" class="login-container__label-login">Login:</label><br>
+                        <input type="text" id="login" class="login-container__input-login" placeholder="Login or E-Mail"><br>
+                        <label for="password" class="login-container__label-password">Password:</label><br>
+                        <input type="password" id="password" class="login-container__input-password" placeholder="Your password">
+                        <div class="login-container__submit-container">
+                            <a href="#" class="login-container__forgotten-password">Forgott Password?</a>
+                            <input type="submit" class="login-container__login-button " value="Login">
+                        </div>
+                    </form>
+                    <div class="login-container__additional-login-container">
+                        <p class="login-container__additional-title">Additional options for Login</p>
+                        <button class="login-container__login-guest-button">Login as Guest</button>
+                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-longtitle="true"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- <script src="library/jquery-3.5.0.min.js"></script>
     <script src="JavaScript/AddTodo.js"></script>
     <script src="JavaScript/Chat.js"></script>
@@ -848,6 +882,6 @@
     <script src="JavaScript/SidebarNav.js"></script>
     <script src="JavaScript/main.js"></script> -->
 
-    <script src="build/js/main-791116df8d630b663db8.js"></script><script src="build/js/addTodo-bde0b3ff46a794686aa0.js"></script><script src="build/js/chat-4986e466beb972ea9048.js"></script><script src="build/js/colors-78e554b4a2590832afdd.js"></script><script src="build/js/doneTodo-40d208d429e88dc812c6.js"></script><script src="build/js/mobile-a6509c399fad1fd4d2a0.js"></script><script src="build/js/options-7c80d49be3681308fcf9.js"></script><script src="build/js/progress-4b605d9a001311cebbd7.js"></script><script src="build/js/sidebarNav-7fc07ea8114bc2cc58f1.js"></script>
+    <script src="build/js/main-b2c7c0586963946586ca.js"></script><script src="build/js/addTodo-43d5405afca71d08da91.js"></script><script src="build/js/chat-4986e466beb972ea9048.js"></script><script src="build/js/colors-78e554b4a2590832afdd.js"></script><script src="build/js/doneTodo-40d208d429e88dc812c6.js"></script><script src="build/js/mobile-a6509c399fad1fd4d2a0.js"></script><script src="build/js/options-7c80d49be3681308fcf9.js"></script><script src="build/js/progress-4b605d9a001311cebbd7.js"></script><script src="build/js/sidebarNav-7fc07ea8114bc2cc58f1.js"></script>
 </body>
 </html>

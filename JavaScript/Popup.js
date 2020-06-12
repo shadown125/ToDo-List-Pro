@@ -12,7 +12,7 @@ class Popup {
         //         inputTitle.focus();
         //         console.log('lol')
         //     }
-            
+
         // }
 
         // const displayPopup = (e) => {
@@ -25,9 +25,9 @@ class Popup {
         //     popupContent.style.visibility = "hidden";
         // }
 
-            // button.addEventListener('click', autoFocus);
+        // button.addEventListener('click', autoFocus);
         // popupContentButton.addEventListener('click', hidePopup);
-       
+
     }
-    
+
 }

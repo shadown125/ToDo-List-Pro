@@ -1,6 +1,8 @@
 const path = require('path');
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -26,8 +28,7 @@ module.exports = {
         path: path.resolve(__dirname, '../', 'build')
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
@@ -38,22 +39,23 @@ module.exports = {
             {
                 test: /\.(jpg|png|svg|gif|jpeg)$/,
                 use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name][contenthash:6].[ext]',
-                        outputPath: 'img',
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name][contenthash:6].[ext]',
+                            outputPath: 'img',
                         }
-                }, 
-                {
-                    loader: 'image-webpack-loader',
-                    options: {
-                        mozjpeg: {
-                            quality: 70,
-                            progressive: true  //zdjecie sie wczytuje z gorszej jakosci az do najlepszej
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                quality: 70,
+                                progressive: true //zdjecie sie wczytuje z gorszej jakosci az do najlepszej
+                            }
                         }
                     }
-                }]
-                
+                ]
+
             },
             {
                 test: /\.(js|jsx)$/,
@@ -61,8 +63,11 @@ module.exports = {
                 exclude: /node_modules/,
                 options: {
                     presets: [
-                        ["@babel/preset-env", { useBuiltIns: 'usage', corejs: "2.0.0" }]
-                        ],
+                        ["@babel/preset-env", {
+                            useBuiltIns: 'usage',
+                            corejs: "2.0.0"
+                        }]
+                    ],
                     plugins: [
                         "@babel/plugin-proposal-class-properties"
                     ]
@@ -70,15 +75,13 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                use: [
-                  {
+                use: [{
                     loader: 'svg-url-loader',
                     options: {
-                      limit: 10000,
+                        limit: 10000,
                     },
-                  },
-                ],
-              },
+                }, ],
+            },
         ]
     },
     plugins: [
@@ -90,13 +93,10 @@ module.exports = {
             filename: 'css/[name]-[contenthash].css'
         }),
         new CopyPlugin({
-           patterns: [
-                {
+            patterns: [{
                 from: 'img',
                 to: 'img'
-                }
-            ]
-        }
-        )
+            }]
+        })
     ]
 }

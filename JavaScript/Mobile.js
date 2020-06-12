@@ -13,51 +13,51 @@ export default class Mobile {
         this.progressionButton = document.querySelector('.profile-menu__progression')
         this.progressionContent = document.querySelector('.progression-levels')
         this.size = 600
-        
-        
-        
+
+
+
         // const preventBug = () => {
         //     // if(size < window.innerWidth ) {
         //     //     inbox.style.display = 'none';
         //     //     inbox.style.visibility = "hidden";
         //     // }
 
-            
+
         // }
 
-        
+
 
         // const showSidebar = () => {
-           
 
-            
+
+
         // }
 
         // const hideSidebar = () => {
-           
+
         // }
 
-    //     const inboxContent = () => {
+        //     const inboxContent = () => {
 
-            
-    // }
 
-    //     const todos = () => {
+        // }
 
-           
-        
-    // }
+        //     const todos = () => {
+
+
+
+        // }
 
         // const doneTodoContent = () => {
-            
+
         // }
 
         // const progressionsSection = () => {
-            
-   
+
+
 
         // }
-    
+
 
         window.addEventListener('resize', this.preventBug.bind(this))
         this.today.addEventListener('click', this.todos.bind(this))
@@ -68,12 +68,12 @@ export default class Mobile {
         this.doneTodos.addEventListener('click', this.doneTodoContent.bind(this));
         this.progressionButton.addEventListener('click', this.progressionsSection.bind(this));
         this.progressionButton.addEventListener('click', this.hideSidebar.bind(this));
-        
+
     }
 
     preventBug() {
 
-        if(window.innerWidth > 600 && this.inbox.style.display === "block" && this.inbox.style.visibility === "visible" && this.todoContent.style.display === "none" || this.todoContent.style.visibility === "hidden") {
+        if (window.innerWidth > 600 && this.inbox.style.display === "block" && this.inbox.style.visibility === "visible" && this.todoContent.style.display === "none" || this.todoContent.style.visibility === "hidden") {
 
             this.todoContent.style.display = 'none';
             this.todoContent.style.visibility = "hidden";
@@ -82,10 +82,10 @@ export default class Mobile {
 
             this.inbox.style.display = 'none';
             this.inbox.style.visibility = "hidden";
-            
+
         }
 
-        if (window.innerWidth > 1200 && this.progressionContent.style.display === "none" ) {
+        if (window.innerWidth > 1200 && this.progressionContent.style.display === "none") {
             this.inbox.style.display = "block";
             this.inbox.style.visibility = "visible";
             this.todoContent.style.display = "block";
@@ -103,9 +103,9 @@ export default class Mobile {
 
     inboxContent() {
 
-        if(window.innerWidth < 1200) {
+        if (window.innerWidth < 1200) {
 
-            if(this.todoContent.style.display === "block" || this.todoContent.style.visibility === "visible" || true ) {
+            if (this.todoContent.style.display === "block" || this.todoContent.style.visibility === "visible" || true) {
                 this.todoContent.style.display = 'none';
                 this.todoContent.style.visibility = "hidden";
             }
@@ -114,7 +114,7 @@ export default class Mobile {
             this.inbox.style.display = "block";
             this.inbox.style.visibility = "visible";
 
-            if(this.progressionContent.style.display === 'block' && this.progressionContent.style.visibility === 'visible') {
+            if (this.progressionContent.style.display === 'block' && this.progressionContent.style.visibility === 'visible') {
                 this.progressionContent.style.display = 'none';
                 this.progressionContent.style.visibility = "hidden";
             }
@@ -124,9 +124,9 @@ export default class Mobile {
 
     todos() {
 
-        if(window.innerWidth < 1200) {
+        if (window.innerWidth < 1200) {
 
-            if(this.inbox.style.display == "block" || this.inbox.style.visibility == "visible" ) {
+            if (this.inbox.style.display == "block" || this.inbox.style.visibility == "visible") {
                 this.inbox.style.display = 'none';
                 this.inbox.style.visibility = "hidden";
                 console.log('lol')
@@ -135,16 +135,16 @@ export default class Mobile {
             this.sidebar.style.left = "-60%"
 
             this.todoContent.style.display = "block";
-            this.todoContent.style.visibility = "visible"; 
+            this.todoContent.style.visibility = "visible";
 
         }
 
-        if(window.innerWidth > 1200) {
+        if (window.innerWidth > 1200) {
             this.inbox.style.display = "block";
             this.inbox.style.visibility = "visible";
         }
 
-        if(this.progressionContent.style.display === 'block' || this.progressionContent.style.visibility === "visible") {
+        if (this.progressionContent.style.display === 'block' || this.progressionContent.style.visibility === "visible") {
             this.progressionContent.style.display = 'none';
             this.progressionContent.style.visibility = "hidden";
         }
@@ -155,42 +155,42 @@ export default class Mobile {
 
     doneTodoContent() {
 
-        if(window.innerWidth < 1200) {
-            if(this.inbox.style.display === "block" || this.inbox.style.visibility === "visible" ) {
+        if (window.innerWidth < 1200) {
+            if (this.inbox.style.display === "block" || this.inbox.style.visibility === "visible") {
                 this.inbox.style.display = 'none';
                 this.inbox.style.visibility = "hidden";
             }
 
             this.doneTodos.style.display = "block";
             this.doneTodos.style.visibility = "visible";
-            
+
             this.todoContent.style.display = "block";
             this.todoContent.style.visibility = "visible";
         }
 
-        if(window.innerWidth > 1200) {
+        if (window.innerWidth > 1200) {
             this.inbox.style.display = "block";
-        this.inbox.style.visibility = "visible";
+            this.inbox.style.visibility = "visible";
         }
 
-            if(this.progressionContent.style.display === 'block' || this.progressionContent.style.visibility === "visible") {
-                this.progressionContent.style.display = 'none';
-                this.progressionContent.style.visibility = "hidden";
-            }
+        if (this.progressionContent.style.display === 'block' || this.progressionContent.style.visibility === "visible") {
+            this.progressionContent.style.display = 'none';
+            this.progressionContent.style.visibility = "hidden";
+        }
 
-            this.doneTodos.style.display = "block";
-            this.doneTodos.style.visibility = "visible";
-            
-            this.todoContent.style.display = "block";
-            this.todoContent.style.visibility = "visible";
+        this.doneTodos.style.display = "block";
+        this.doneTodos.style.visibility = "visible";
+
+        this.todoContent.style.display = "block";
+        this.todoContent.style.visibility = "visible";
     }
-    
+
     progressionsSection() {
         this.inbox.style.display = 'none';
         this.inbox.style.visibility = "hidden";
         this.todoContent.style.display = 'none';
         this.todoContent.style.visibility = "hidden"
-    
+
         this.progressionContent.style.display = 'block';
         this.progressionContent.style.visibility = "visible";
     }

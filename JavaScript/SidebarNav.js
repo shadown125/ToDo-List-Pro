@@ -18,7 +18,7 @@ export default class SidebarNav {
     }
 
     optionsProject() {
-        if(this.countP === 1) {
+        if (this.countP === 1) {
             this.ulListItemsProject.style.display = "none"
             this.countP = 0
             return;
@@ -29,7 +29,7 @@ export default class SidebarNav {
     }
 
     optionsLabels() {
-        if(this.countL === 1) {
+        if (this.countL === 1) {
             this.ulListItemsLabels.style.display = "none"
             this.countL = 0
             return;
@@ -40,7 +40,7 @@ export default class SidebarNav {
     }
 
     optionsFiltres() {
-        if(this.countF === 1) {
+        if (this.countF === 1) {
             this.ulListItemsFiltres.style.display = "none"
             this.countF = 0
             return;

@@ -9,7 +9,7 @@ export default class Colors {
         this.$main = $('.color-main');
 
         this.$body = $('body')
-        
+
         this.$main.on('click', this.mainFilter.bind(this));
         this.$orange.on('click', this.orangeFilter.bind(this));
         this.$violet.on('click', this.violetFilter.bind(this));
@@ -33,7 +33,7 @@ export default class Colors {
     }
 
     violetFilter() {
-        
+
         this.resetFilters();
         this.$body.addClass('color-violet');
     }
