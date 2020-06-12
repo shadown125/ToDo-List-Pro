@@ -1,4 +1,4 @@
-class Done {
+export default class Done {
     constructor() {
         this.doneTodosButton = document.querySelector('.profile-menu__text-done');
         this.doneContainer = document.querySelector('.done-todos');

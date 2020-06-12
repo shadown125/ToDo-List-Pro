@@ -1,4 +1,4 @@
-class Mobile {
+export default class Mobile {
     constructor() {
         this.sidebar = document.querySelector('.sidebar');
         this.background = document.querySelector('.background-blur');

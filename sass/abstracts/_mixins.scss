@@ -240,6 +240,122 @@
             color: transparent;
         }
 }
+
+@mixin bgcBlurr {
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+}
+
+@mixin header-colors {
+    .color-main &{
+        background: $header-main;
+    }
+    .color-violet &{
+        background: $header-violet;
+    }
+    .color-green &{
+        background: $header-green;
+    }
+    .color-orange &{
+        background: $header-orange;
+    }
+    .color-blue &{
+        background: $header-blue;
+    }
+}
+
+@mixin container-colors {
+    .color-main &{
+        background: $container-main;
+    }
+    .color-violet &{
+        background: $container-violet;
+    }
+    .color-green &{
+        background: $container-green;
+    }
+    .color-orange &{
+        background: $container-orange;
+    }
+    .color-blue &{
+        background: $container-blue;
+    }
+}
+
+@mixin sidebar-colors {
+    .color-main &{
+        background: $sidebar-main;
+    }
+    .color-violet &{
+        background: $sidebar-violet;
+    }
+    .color-green &{
+        background: $sidebar-green;
+    }
+    .color-orange &{
+        background: $sidebar-orange;
+    }
+    .color-blue &{
+        background: $sidebar-blue;
+    }
+}
+
+@mixin progressContent-colors {
+    .color-main &{
+        background: $progressContent-main;
+    }
+    .color-violet &{
+        background: $progressContent-violet;
+    }
+    .color-green &{
+        background: $progressContent-green;
+    }
+    .color-orange &{
+        background: $progressContent-orange;
+    }
+    .color-blue &{
+        background: $progressContent-blue;
+    }
+}
+
+@mixin todo-colors {
+    .color-main &{
+        background: $todo-main;
+    }
+    .color-violet &{
+        background: $todo-violet;
+    }
+    .color-green &{
+        background: $todo-green;
+    }
+    .color-orange &{
+        background: $todo-orange;
+    }
+    .color-blue &{
+        background: $todo-blue;
+    }
+}
+
+@mixin interfaceContainer-colors {
+    .color-main &{
+        background: $interfaceContainer-main;
+    }
+    .color-violet &{
+        background: $interfaceContainer-violet;
+    }
+    .color-green &{
+        background: $interfaceContainer-green;
+    }
+    .color-orange &{
+        background: $interfaceContainer-orange;
+    }
+    .color-blue &{
+        background: $interfaceContainer-blue;
+    }
+}
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

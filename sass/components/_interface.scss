@@ -6,6 +6,49 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include interfaceContainer-colors;
+
+}
+
+.interface {
+    position: relative;
+
+    &__block {
+        background-color: $color-black;
+        position: absolute;
+        top: 2.5rem;
+        left: 2.5rem;
+        width: 90%;
+        height: 95%;
+        z-index: 10;
+        opacity: .3;
+        border-radius: 15px;
+    
+        @include bgcBlurr;
+    }
+
+    &__block-svg-container {
+        position: absolute;
+        flex-direction: column;
+        z-index: 11;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -3rem;
+        margin-top: -6rem;
+    }
+
+    &__block-svg {
+        fill: grey;
+    }
+
+    &__block-text {
+        font-size: 2rem;
+        color: white;
+    }
 }
 
 ////////////////////////////////////////////////////

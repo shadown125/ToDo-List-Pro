@@ -1,4 +1,4 @@
- class AddTodo {
+ export default class AddTodo {
     constructor() {
         this.toDoList = [];
 

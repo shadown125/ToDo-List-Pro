@@ -11,6 +11,8 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
+    @include header-colors;
+
     @include respond(phone) {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -98,6 +100,31 @@
     @include respond(phone) {
         visibility: hidden;
         display: none;
+    }
+
+    // BLOCK CONTENT
+    &__block-container {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color:$color-black;
+        border-radius: 50%;
+        z-index: 6;
+        margin-top: -.3rem;
+
+        @include bgcBlurr;
+    }
+
+    &__block-svg-container {
+        position: absolute;
+        z-index: 7;
+        margin-top: .5rem;
+    }
+
+    &__block-svg {
+        width: 3rem;
+        height: 3rem;
+        fill: $color-mail-2;
     }
 
     &__list {

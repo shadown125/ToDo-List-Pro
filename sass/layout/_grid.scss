@@ -7,6 +7,8 @@
     min-height: 70rem;
     overflow: hidden;
 
+    @include container-colors;
+
     @include respond(2k-desktop) {
         max-width: 170rem;
     }

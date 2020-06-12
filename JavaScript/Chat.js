@@ -1,4 +1,4 @@
-class Chat {
+export default class Chat {
     constructor() {
         this.customCheckBox = document.querySelector('.chat-container__custom-checkbox');
         this.customCheckDiv = document.querySelector('.chat-container__custom-checkbox-inner');

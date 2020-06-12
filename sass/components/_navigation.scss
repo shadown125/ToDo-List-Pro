@@ -11,6 +11,8 @@
     &__copyright {
         font-size: 1.5rem;
     }
+
+    @include sidebar-colors;
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -77,6 +79,78 @@
     width: 100%;
     padding: 1rem;
     display: flex;
+    position: relative;
+
+    // BLOCKED SECTION CHAT
+    &__block-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        background-color: $color-black;
+        border-radius: 15px;
+        
+        @include bgcBlurr;
+    }
+
+    &__block-svg-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 5rem;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__block-svg {
+        height: 3rem;
+        width: 3rem;
+        margin-left: -6.3rem;
+        fill: $color-mail-2;
+
+        @include respond(2k-desktop) {
+            margin-left: -6.9rem;
+        }
+
+        @include respond(tab-land-very-big) {
+            margin-left: -3.5rem;
+        }
+
+        @include respond(tab-land) {
+            margin-left: -5.5rem;
+        }
+
+        @include respond(tab-port-big) {
+            margin-left: -3.5rem; 
+        }
+    }
+
+    &__block-text {
+        font-size: 1.6rem;
+        color: $color-grey-light-4;
+        margin-left: -10rem;
+    }
+
+     // BLOCKED SECTION PROGRESS
+
+     &__block-container-progress {
+         top: 73%;
+     }
+
+     &__block-svg-container-progress {
+         top: 73%;
+     }
+
+     &__block-svg-progress {
+         fill: #db104a;
+     }
+
+     &__block-text-progress {
+         margin-top: .3rem;
+     }
 
     &__wrapper {
     display: flex;
