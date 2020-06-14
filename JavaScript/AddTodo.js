@@ -1,3 +1,5 @@
+ import $ from 'jquery'
+
  export default class AddTodo {
      constructor() {
          this.toDoList = [];
@@ -20,6 +22,21 @@
 
          this.addTaskButton.addEventListener('click', this.addTask.bind(this));
          this.searchInput.addEventListener('input', this.searchTask.bind(this));
+
+        // LVL SECTION
+
+        this.$completeTodoBtn = $('.main-content__svg-circle-check');
+        this.$photoMainLvl = $('.profile-box__levels');
+        this.$settingsMainLvl = $('.popup-settings__progress-bar-lvl');
+
+        // VALUES
+        this.$currentExp = $('.popup-settings__current-exp');
+        this.$lvlUpExp = $('.popup-settings__to-lvlup-exp');
+        this.$progressLine = $('.popup-settings__progress');
+        this.$progressPercent = $('.popup-settings__progress-value');
+
+        this.multiplayer = 1;
+        this.leftExpAfterLvl = 0;
      }
 
 
@@ -91,6 +108,7 @@
 
          task.querySelector('.main-content__svg-attachment').addEventListener('click', this.removeTask.bind(this));
          task.querySelector('.main-content__svg-check').addEventListener('click', this.completeTask.bind(this));
+         task.querySelector('.main-content__svg-check').addEventListener('click', this.addExp.bind(this));
      }
 
      renderList() {
@@ -115,4 +133,41 @@
              this.ulListTodo.appendChild(filtrLi);
          })
      }
+
+     addExp() {
+        
+        let currentExpValue = Number(this.$currentExp.text());
+        let toLvlUpExpValue = Number(this.$lvlUpExp.text());
+
+        let photoMainLvlValue = Number(this.$photoMainLvl.text());
+        let settingsMainLvlValue = Number(this.$settingsMainLvl.text());
+
+        let currentSum = currentExpValue + 11 * this.multiplayer;
+
+        let percentExp = currentSum * 100 / toLvlUpExpValue;
+
+        this.$progressLine.css('width', `${percentExp}%`);
+        this.$progressPercent.text(`${percentExp.toFixed(2)}%`)
+        this.$currentExp.text(Math.round(currentSum));
+
+        if(Number(this.$currentExp.text()) >= toLvlUpExpValue) {
+            
+            this.leftExpAfterLvl = Number(this.$currentExp.text()) - toLvlUpExpValue;
+            this.$photoMainLvl.text(photoMainLvlValue += 1);
+            this.$settingsMainLvl.text(settingsMainLvlValue += 1);
+
+            this.$lvlUpExp.text(toLvlUpExpValue = Math.round(toLvlUpExpValue * 1.7));
+            Number(this.$currentExp.text(Math.round(this.leftExpAfterLvl)));
+
+            let percentExpAfterExp = this.leftExpAfterLvl * 100 / toLvlUpExpValue;
+
+            this.$progressLine.css('width', `${percentExpAfterExp}%`);
+            this.$progressPercent.text(`${percentExpAfterExp.toFixed(2)}%`);
+
+            this.multiplayer = this.multiplayer + 0.3;
+            return;
+        }
+        
+        
+    }
  }

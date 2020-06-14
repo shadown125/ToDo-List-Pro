@@ -288,6 +288,7 @@
     font-size: 2rem;
     width: 80%;
     margin-bottom: -1rem;
+    @content;
 }
 
 @mixin header-colors {
@@ -446,6 +447,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media only screen and (max-width: 106.25em) { @content }; 
     }
 
+    @if $breakpoint == tab-land-very-big-2 {
+        @media only screen and (max-width: 132.5em) { @content }; 
+    }
 
     @if $breakpoint == 2k-desktop {
         @media only screen and (min-width: 132.5em) { @content };   // +1800px

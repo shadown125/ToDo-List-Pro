@@ -188,6 +188,65 @@
         margin-top: -2rem;
     }
 
+    // PROGRESS BAR
+
+    &__progress-bar-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 5rem;
+        margin-bottom: -2.3rem;
+    }
+
+    &__progress-bar-title {
+        font-size: 1.7rem;
+        color: $color-grey-light-3;
+    }
+
+    &__progress-bar-lvl {
+        margin-left: .4rem;
+    }
+
+    &__progress-bar {
+        width: 70%;
+        height: 1.2rem;
+        border-radius: 15px;
+        background-color: grey;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    &__progress {
+        width: 0%;
+        height: 1.2rem;
+        border-radius: 15px;
+        // background: linear-gradient(45deg, #ffee54, #ff00ca);
+        background: linear-gradient(45deg, #22ffde, #2196f3);
+        animation: progressAnimation 2s ease-in-out;
+    }
+
+    @keyframes progressAnimation {
+        from {
+            width: 0%;
+        }
+    }
+
+    &__progress-value {
+        font-size: 1.7rem;
+        color: $color-grey-light-3;
+    }
+
+    &__exp-value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-grey-light-3;
+        margin-top: -1.55rem;
+        font-size: 1.3rem;
+        margin-left: -4rem;
+    }
+
     &__profile {
 
     }

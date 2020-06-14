@@ -6,6 +6,7 @@ export default class Options {
 
         // Option List buttons
         this.optionList = document.getElementsByClassName('popup-settings__options-list');
+        this.progressLine = document.querySelector('.popup-settings__progress-bar-container');
         this.nameButton = document.querySelector('.popup-settings__option-name')
         this.professionButton = document.querySelector('.popup-settings__option-profession')
         this.imageButton = document.querySelector('.popup-settings__option-image')
@@ -23,6 +24,7 @@ export default class Options {
         this.buttonApply = document.querySelector('.name-change__button-apply');
         this.buttonApplyPro = document.querySelector('.name-change__button-apply-pro');
         this.ahrefPopup = document.querySelector('.popup-settings__svg-ahref');
+        this.btnConfig = document.querySelector('.icons__btn-config');
 
         // Date
         this.profileName = document.getElementsByClassName('profile-box__user-name');
@@ -39,6 +41,8 @@ export default class Options {
         this.flag2 = false;
 
 
+        this.btnConfig.addEventListener('click', this.displayProgressBar.bind(this));
+        
         this.messegesContainer.addEventListener('click', this.preventBug.bind(this));
         // this.messegesIcon.addEventListener('click', this.showMesseges.bind(this))  BLOCKED
         this.body.addEventListener('click', this.hidePopup.bind(this));
@@ -46,6 +50,7 @@ export default class Options {
         this.nameButton.addEventListener('click', this.hideOptions.bind(this));
         this.buttonBack.addEventListener('click', this.backToOptions.bind(this));
         this.ahrefPopup.addEventListener('click', this.backToOptions.bind(this));
+        this.ahrefPopup.addEventListener('click', this.hideProgressBar.bind(this));
         // Profession section
 
         this.professionButton.addEventListener('click', this.hideOptions.bind(this));
@@ -92,6 +97,7 @@ export default class Options {
         for (let i = 0; i < this.optionList.length; i++) {
             this.optionList[i].style.display = 'none';
         }
+        this.progressLine.style.display = 'none'
     }
 
     showChangeName() {
@@ -102,6 +108,7 @@ export default class Options {
         for (let i = 0; i < this.optionList.length; i++) {
             this.optionList[i].style.display = 'block';
         }
+        this.progressLine.style.display = 'flex';
         this.professionContainer.style.display = 'none';
         this.nameContainer.style.display = 'none';
         for (let i = 0; i < this.successContainer.length; i++) {
@@ -137,6 +144,17 @@ export default class Options {
         for (let i = 0; i < this.successContainer.length; i++) {
             this.successContainer[i].style.visibility = 'visible'
         }
+    }
+
+    displayProgressBar() {
+        this.progressLine.style.display = 'flex';
+    }
+
+    hideProgressBar() {
+        setTimeout(() => {
+            this.progressLine.style.display = 'none';
+        },500)
+        
     }
 
 }

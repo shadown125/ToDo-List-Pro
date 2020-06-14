@@ -69,7 +69,7 @@
 
     &__bar-container {
         width: 93%;
-        height: .3rem;
+        height: 1rem;
         background-color: $color-cont-bar;
         border-radius: 15px;
         margin-left: .3rem;
@@ -77,8 +77,17 @@
 
     &__bar {
         width: 0%;
-        height: .3rem;
-        background-color: $color-ins-bar;
+        height: 1rem;
+        background: linear-gradient(45deg, #ffee54, #ff00ca);
         border-radius: 15px;
+    }
+
+    &__bar-percent {
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-grey-light-2;
+        margin-top: -1.4rem;
     }
 }

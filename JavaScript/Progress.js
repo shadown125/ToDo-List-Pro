@@ -4,10 +4,10 @@ export default class Progress {
         this.$dateNumber = $('.progression__day');
         this.$monthDate = $('.progression__month');
         this.$progressLine = $('.progression__bar');
-        this.$doneTodoCounter = $('.progression__done-counter')
-        this.$mustDoCounter = $('.progression__must-do-task-counter')
+        this.$doneTodoCounter = $('.progression__done-counter');
+        this.$mustDoCounter = $('.progression__must-do-task-counter');
 
-
+        this.$progressPercent = $('.progression__bar-percent');
 
         // DATE
 
@@ -66,6 +66,9 @@ export default class Progress {
             const total = Number(mustDoNumber) + Number(doneTodoNumber);
             let percent = doneTodoNumber * 100 / total;
 
+            if(percent) {
+                Number(this.$progressPercent.text(`${percent.toFixed(2)}%`))
+            }
             this.$progressLine.css('width', `${percent}%`)
         }, 500)
     }

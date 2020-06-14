@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="img/favicon.ico" rel="icon" type="image/x-icon" /> <!--Author "Larissa"-->
-    <link href="build/css/main-3e301b7d5a2011099e2a.css" rel="stylesheet">
+    <link href="build/css/main-35b68195b344efb572fa.css" rel="stylesheet">
     <title>ToDo App</title>
 </head>
 <body id="body">
@@ -59,7 +59,7 @@
 
 
                     <li class="icons__single-item-1">
-                         <button class="btn-svg">
+                         <button class="btn-svg login-btn">
                              <svg class="svg icons__svg-circle">
                                   <use xlink:href="img/sprite.svg#icon-circle-with-plus"></use>
                               </svg>
@@ -153,6 +153,14 @@
                             <p class="profile-menu__block-text profile-menu__block-text-progress">Coming Soon..</p>
                         </div>
 
+                        <div class="profile-menu__block-container profile-menu__block-container-achivemnts"></div>
+                        <div class="profile-menu__block-svg-container profile-menu__block-svg-container-achivemnts">
+                            <svg class="profile-menu__block-svg profile-menu__block-svg-achivemnts">
+                                <use xlink:href="img/sprite.svg#icon-lock"></use>
+                            </svg>
+                            <p class="profile-menu__block-text profile-menu__block-text-achivemnts">Coming Soon..</p>
+                        </div>
+
 
                         <div class="profile-menu__wrapper">
                             <div class="profile-menu__inbox">
@@ -178,6 +186,12 @@
                                     <use xlink:href="img/sprite.svg#icon-flash"></use>
                                 </svg>
                             </div>
+
+                            <div class="profile-menu__progression-icon">
+                                <svg class="profile-menu__svg-done">
+                                    <use xlink:href="img/sprite.svg#icon-flash"></use>
+                                </svg>
+                            </div>
                         </div>
 
                         <div class="profile-menu__text">
@@ -186,6 +200,7 @@
                             <a href="#" class="profile-menu__text-done">Done Todos</a>
                             <!-- <p class="profile-menu__coming">Coming soon...</p> -->
                             <a href="#" class="profile-menu__progression">Progressions</a>
+                            <a href="#" class="profile-menu__achivements">Achivements</a>
                         </div>
                     </div>
 
@@ -499,6 +514,7 @@
                         <p class="progression__title">Today's Tasks</p>
                         <div class="progression__bar-container">
                             <div class="progression__bar"></div>
+                            <p class="progression__bar-percent">0%</p>
                         </div>
                         <div class="progression__task-wrapper">
                             <span class="progression__done-tasks task-progression">Done Todo:
@@ -760,6 +776,15 @@
                 </div>
             </div>
 
+            <div class="popup-settings__progress-bar-container">
+                <p class="popup-settings__progress-bar-title">Main LvL:<span class="popup-settings__progress-bar-lvl">1</span></p>
+                <div class="popup-settings__progress-bar">
+                    <div class="popup-settings__progress"></div>
+                    <p class="popup-settings__exp-value"><span class="popup-settings__current-exp">0</span>/ <span class="popup-settings__to-lvlup-exp">20</span> EXP</p>
+                </div>
+                <span class="popup-settings__progress-value">0%</span>
+            </div>
+
             <div class="popup-settings__main-content">
 
                 <div class="name-change">
@@ -857,7 +882,9 @@
                         <input type="password" id="password" class="login-container__input-password" placeholder="Your password">
                         <div class="login-container__submit-container">
                             <a href="#" class="login-container__forgotten-password">Forgott Password?</a>
-                            <input type="submit" class="login-container__login-button " value="Login">
+                            <!-- <input type="submit" class="login-container__login-button ripple-btn" value="Login"> -->
+                            <button class="login-container__login-button ripple-btn">Login</button>
+                            <!-- <a href="" class="login-container__login-button ripple-btn">Login</a> -->
                         </div>
                     </form>
                     <div class="login-container__additional-login-container">
@@ -867,6 +894,53 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="register-container">
+                <div class="register-container__title-wrapper">
+                    <p class="register-container__title">SignUp</p>
+                </div>
+                <div class="register-container__register-form-wrapper">
+                    <form action="#" class="register-container__form">
+                        <label for="nickname" class="register-container__label-nickname">Nickname:</label><br>
+                        <input type="text" id="nickname" class="register-container__input-nickname" placeholder="Unique Nickname">
+                        <label for="email" class="register-container__label-email">E-mail:</label><br>
+                        <input type="email" id="email" class="register-container__input-email" placeholder="name@mail.com"><br>
+                        <label for="passwordRegister" class="register-container__label-password">Password:</label><br>
+                        <input type="password" id="passwordRegister" class="register-container__input-password" placeholder="6 to 20 char, One Big + one special character"><br>
+                        <label for="passwordConfirme" class="register-container__label-confirm-password">Confirm Password:</label><br>
+                        <input type="password" id="passwordConfirme" class="register-container__password-confirme" placeholder="Rewrite password">
+                        <div class="register-container__next-container">
+                            <button class="register-container__back-button">Back</button>
+                            <button class="register-container__next-button">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="register-optional-container">
+                <div class="register-optional-container__title-wrapper">
+                    <p class="register-optional-container__title">SignUp (Optional)</p>
+                </div>
+                <div class="register-optional-container__register-form-wrapper">
+                    <form action="#" class="register-optional-container__form">
+                        <div class="register-optional-container__name-container">
+                            <label for="name" class="register-optional-container__label-name">Name:</label>
+                            <input type="text" id="name" class="register-optional-container__input-name"><br>
+                            <label for="surname" class="register-optional-container__label-surname">Last name:</label>
+                            <input type="text" id="surname" class="register-optional-container__input-surname">
+                        </div>
+                        <div class="register-optional-container__additional-container">
+                            <label for="birth" class="register-optional-container__birth">Birth:</label><br>
+                            <input type="text" id="birth" class="register-optional-container__birth-input"><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="notification-container">
+            <p class="notification-container__text">You are now logged as Guest. Remember that all your progress will be not saved. If u want to save your progress and Todo tasks create your profile by using plus button in the top left corner of the Todo app. You can aswell login through google or with Facebook.</p>
+            <button class="notification-container__button">Got it!</button>
         </div>
     </section>
 
@@ -882,6 +956,6 @@
     <script src="JavaScript/SidebarNav.js"></script>
     <script src="JavaScript/main.js"></script> -->
 
-    <script src="build/js/main-b2c7c0586963946586ca.js"></script><script src="build/js/addTodo-43d5405afca71d08da91.js"></script><script src="build/js/chat-4986e466beb972ea9048.js"></script><script src="build/js/colors-78e554b4a2590832afdd.js"></script><script src="build/js/doneTodo-40d208d429e88dc812c6.js"></script><script src="build/js/mobile-a6509c399fad1fd4d2a0.js"></script><script src="build/js/options-7c80d49be3681308fcf9.js"></script><script src="build/js/progress-4b605d9a001311cebbd7.js"></script><script src="build/js/sidebarNav-7fc07ea8114bc2cc58f1.js"></script>
+    <script src="build/js/main-023f9b20c1c6ddb902af.js"></script><script src="build/js/addTodo-84c53f71562db8976625.js"></script><script src="build/js/chat-f1e67310990c325a7d2c.js"></script><script src="build/js/colors-103bdd290ed50d14ac60.js"></script><script src="build/js/doneTodo-a8c8b008a1decd31c1c4.js"></script><script src="build/js/mobile-377d39d52dc752ec4c68.js"></script><script src="build/js/options-c54e006c1e467d48bf8c.js"></script><script src="build/js/progress-0c376231e5a70ce6acb1.js"></script><script src="build/js/sidebarNav-8c80f37a89d3b3082fb5.js"></script>
 </body>
 </html>
